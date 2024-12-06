@@ -18,6 +18,9 @@ export function SearchAndFilter({ subjects }: { subjects: Subject[] }) {
   const [selectedCourses, setSelectedCourses] = useState<string[]>(
     searchParams.get("courses")?.split(",") || []
   );
+  const [selectedSubjectYears, setSelectedSubjectYears] = useState<string[]>(
+    searchParams.get("years")?.split(",") || []
+  );
 
   const availableCourses = useMemo(() => {
     const coursesSet = new Set<string>();

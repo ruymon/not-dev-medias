@@ -1,10 +1,11 @@
-import { Header } from "@/app/_components/header";
+import { DesktopNavbar } from "@/app/_components/desktop-navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import { Toaster } from "sonner";
 import "./globals.css";
+import { MobileNavbar } from "./_components/mobile-navbar";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -31,7 +32,8 @@ export default function RootLayout({
         )}
       >
         <ThemeProvider>
-          <Header />
+          <DesktopNavbar />
+          <MobileNavbar />
           {children}
           <Toaster />
         </ThemeProvider>
