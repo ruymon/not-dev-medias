@@ -37,8 +37,8 @@ export default function GradesPage() {
     Object.keys(subscribedSubjects).length === 0;
 
   return (
-    <main className="flex py-8 container gap-16">
-      <aside className="flex flex-col max-w-[30%]">
+    <main className="flex py-8 container gap-16 flex-col md:flex-row">
+      <aside className="flex flex-col md:max-w-[30%]">
         {Object.keys(subscribedSubjects).length > 0 && (
           <>
             <GradeSummary
