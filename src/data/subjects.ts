@@ -3289,10 +3289,8 @@ export const SUBJECTS: Subjects = {
       { name: "P4", weight: 0.3 },
     ],
     assignments: [
-      { name: "T1", weight: 0.1666666667 },
-      { name: "T2", weight: 0.1666666667 },
-      { name: "T3", weight: 0.3333333333 },
-      { name: "T4", weight: 0.3333333333 },
+      { name: "T1", weight: 0.5 },
+      { name: "T2", weight: 0.5 },
     ],
   },
   EFB110: {
