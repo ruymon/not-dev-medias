@@ -13,8 +13,8 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: "dev.medias",
-  description: "Simplificando o cálculo da suas médias",
+  title: "Não é o Dev Médias",
+  description: "",
 };
 
 export default function RootLayout({

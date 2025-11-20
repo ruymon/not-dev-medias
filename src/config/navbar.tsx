@@ -1,5 +1,4 @@
 import {
-  ChartCandlestick,
   ChartCandlestickIcon,
   HomeIcon,
   MedalIcon,
