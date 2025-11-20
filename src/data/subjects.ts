@@ -3366,8 +3366,8 @@ export const SUBJECTS: Subjects = {
     name: "Física I",
     code: "EFB207",
     period: "A",
-    examWeight: 50.0,
-    assignmentWeight: 50.0,
+    examWeight: 60.0,
+    assignmentWeight: 40.0,
     exams: [
       { name: "P1", weight: 0.2 },
       { name: "P2", weight: 0.2 },
@@ -3386,8 +3386,8 @@ export const SUBJECTS: Subjects = {
     name: "Física I",
     code: "EFB208",
     period: "S",
-    examWeight: 50.0,
-    assignmentWeight: 50.0,
+    examWeight: 60.0,
+    assignmentWeight: 40.0,
     exams: [
       { name: "P1", weight: 0.5 },
       { name: "P2", weight: 0.5 },
