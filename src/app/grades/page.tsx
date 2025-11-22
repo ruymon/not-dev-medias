@@ -10,6 +10,12 @@ import { GradeSummary } from "./_components/grade-summary";
 import { ImportGradesButton } from "./_components/import-grades-button";
 import { SubjectGradesInputCard } from "./_components/subject-grades-input-card";
 
+function clamp(value: number, min: number, max: number) {
+  value = Math.max(value, min);
+  value = Math.min(value, max);
+  return value;
+}
+
 export default function GradesPage() {
   const { subscribedSubjects } = useSubscribedSubjectsStore();
   const { grades, setGrades } = useSubscribedSubjectsGradesStore();
@@ -19,6 +25,8 @@ export default function GradesPage() {
     examOrAssignment: string,
     grade: number
   ) => {
+    grade = clamp(grade, 0, 10);
+
     const updatedGrades = {
       ...grades,
       [subjectCode]: {
