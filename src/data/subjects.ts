@@ -2482,7 +2482,8 @@ export const SUBJECTS: Subjects = {
     period: "S",
     examWeight: 60.0,
     assignmentWeight: 40.0,
-    exams: [{ name: "P1", weight: 1.0 }],
+    exams: [{ name: "P1", weight: 0.5 }
+           { name: "P2", weight: 0.5 }],
     assignments: [{ name: "T1", weight: 1 }],
   },
   ECM401: {
