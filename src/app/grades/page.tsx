@@ -2,13 +2,16 @@
 
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import { calculateRequiredGrade } from "@/lib/grades";
 import { useSubscribedSubjectsGradesStore } from "@/stores/subscribed-subjects-grades-store";
 import { useSubscribedSubjectsStore } from "@/stores/subscribed-subjects-store";
+import { useTargetFinalGradeStore } from "@/stores/target-final-grade-store";
 import { Fragment } from "react";
 import { ExportGrades } from "./_components/export-grades";
 import { GradeSummary } from "./_components/grade-summary";
 import { ImportGradesButton } from "./_components/import-grades-button";
 import { SubjectGradesInputCard } from "./_components/subject-grades-input-card";
+import { TargetGradeInput } from "./_components/target-grade-input";
 
 function clamp(value: number, min: number, max: number) {
   value = Math.max(value, min);
@@ -19,6 +22,7 @@ function clamp(value: number, min: number, max: number) {
 export default function GradesPage() {
   const { subscribedSubjects } = useSubscribedSubjectsStore();
   const { grades, setGrades } = useSubscribedSubjectsGradesStore();
+  const { targetGrade } = useTargetFinalGradeStore();
 
   const handleGradeChange = (
     subjectCode: string,
@@ -49,9 +53,11 @@ export default function GradesPage() {
       <aside className="flex flex-col md:max-w-[30%]">
         {Object.keys(subscribedSubjects).length > 0 && (
           <>
+            <TargetGradeInput />
             <GradeSummary
               subscribedSubjects={subscribedSubjects}
               grades={grades}
+              targetGrade={targetGrade}
             />
             <Button
               onClick={handleClearGrades}
@@ -68,18 +74,31 @@ export default function GradesPage() {
       </aside>
 
       <ul className="flex flex-col flex-1 gap-2">
-        {Object.values(subscribedSubjects).map((subject) => (
-          <Fragment key={subject.code}>
-            <SubjectGradesInputCard
-              subject={subject}
-              grades={grades[subject.code] || {}}
-              onGradeChange={(examOrAssignment, grade) =>
-                handleGradeChange(subject.code, examOrAssignment, grade)
-              }
-            />
-            <Separator className="bg-muted" />
-          </Fragment>
-        ))}
+        {Object.values(subscribedSubjects).map((subject) => {
+          const required = calculateRequiredGrade(
+            subject,
+            grades[subject.code] || {},
+            targetGrade
+          );
+
+          return (
+            <Fragment key={subject.code}>
+              <SubjectGradesInputCard
+                subject={subject}
+                grades={grades[subject.code] || {}}
+                onGradeChange={(examOrAssignment, grade) =>
+                  handleGradeChange(subject.code, examOrAssignment, grade)
+                }
+                requiredGrade={
+                  required.status === "possible"
+                    ? required.requiredPerItem
+                    : null
+                }
+              />
+              <Separator className="bg-muted" />
+            </Fragment>
+          );
+        })}
 
         {isSubscribedSubjectsEmpty && (
           <span className="text-center text-muted-foreground">

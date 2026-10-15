@@ -22,14 +22,22 @@ interface SubjectGradesInputCardProps {
   subject: Subject;
   grades: SubjectGrades;
   onGradeChange: (examOrAssignment: string, grade: number) => void;
+  /** Minimum grade needed on each blank item to hit the target, or null. */
+  requiredGrade?: number | null;
 }
 
 export function SubjectGradesInputCard({
   subject,
   grades,
   onGradeChange,
+  requiredGrade,
 }: SubjectGradesInputCardProps) {
   const [isGradesPanelOpen, setIsGradesPanelOpen] = useState(false);
+
+  const requiredPlaceholder =
+    typeof requiredGrade === "number"
+      ? `mín. ${requiredGrade.toFixed(1)}`
+      : undefined;
 
   return (
     <Card className="border-none py-4 flex flex-col shadow-none">
@@ -64,6 +72,7 @@ export function SubjectGradesInputCard({
                         type="number"
                         min="0"
                         max="10"
+                        placeholder={requiredPlaceholder}
                         value={grades[exam.name] || ""}
                         onChange={(e) =>
                           onGradeChange(exam.name, Number(e.target.value))
@@ -91,6 +100,7 @@ export function SubjectGradesInputCard({
                         type="number"
                         min="0"
                         max="10"
+                        placeholder={requiredPlaceholder}
                         value={grades[assignment.name] || ""}
                         onChange={(e) =>
                           onGradeChange(assignment.name, Number(e.target.value))
