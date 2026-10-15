@@ -1,8 +1,8 @@
 "use client";
 
 import { useTheme } from "next-themes";
-import { Toaster as Sonner, type ToasterProps } from "sonner";
 import type * as React from "react";
+import { Toaster as Sonner, type ToasterProps } from "sonner";
 
 function Toaster(props: ToasterProps) {
   const { theme = "system" } = useTheme();
@@ -11,11 +11,17 @@ function Toaster(props: ToasterProps) {
     <Sonner
       theme={theme as ToasterProps["theme"]}
       className="toaster group"
+      // On phones toasts would land on the tab bar, so they lift above it and
+      // the home indicator.
+      mobileOffset={{
+        bottom: "calc(var(--spacing-tab-bar) + env(safe-area-inset-bottom) + 8px)",
+      }}
       style={
         {
-          "--normal-bg": "hsl(var(--popover))",
-          "--normal-text": "hsl(var(--popover-foreground))",
-          "--normal-border": "hsl(var(--border))",
+          "--normal-bg": "var(--popover)",
+          "--normal-text": "var(--popover-foreground)",
+          "--normal-border": "var(--border)",
+          "--border-radius": "14px",
         } as React.CSSProperties
       }
       {...props}

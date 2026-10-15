@@ -1,12 +1,20 @@
+import { EmptyState } from "@/app/_components/empty-state";
+import { Page, PageHeader } from "@/app/_components/page";
+import { MedalIcon } from "lucide-react";
+
 export default function AwardsPage() {
   return (
-    <main className="flex py-8 px-6 max-w-5xl mx-auto w-full gap-8">
-      <header className="flex flex-col gap-1">
-        <h1 className="text-primary font-bold text-3xl">Insígnias</h1>
-        <span className="text-accent-foreground">
-          Ganhe medalhas ao completar desafios
-        </span>
-      </header>
-    </main>
+    <Page>
+      <PageHeader
+        title="Insígnias"
+        description="Ganhe medalhas ao completar desafios."
+      />
+
+      <EmptyState
+        icon={MedalIcon}
+        title="Ainda não tem nada por aqui"
+        description="As insígnias estão a caminho. Por enquanto, siga lançando suas notas — elas vão contar quando isso chegar."
+      />
+    </Page>
   );
 }

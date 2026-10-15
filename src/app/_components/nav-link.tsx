@@ -1,24 +1,57 @@
 "use client";
 
-import Link, { LinkProps } from "next/link";
+import { NAVBAR_ITEMS } from "@/config/navbar";
+import { cn } from "@/lib/utils";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ReactNode } from "react";
 
-interface NavLinkProps extends LinkProps {
-  children: ReactNode;
+interface NavLinkProps {
+  // Icons are components, which can't cross the server/client boundary as
+  // props, so the item is looked up here by href.
+  href: string;
+  /** `tab` is the bottom tab bar on phones, `bar` the desktop top bar. */
+  variant: "tab" | "bar";
 }
 
-export function NavLink({ children, ...props }: NavLinkProps) {
+export function NavLink({ href, variant }: NavLinkProps) {
   const pathname = usePathname();
-  const isActive = pathname === props.href;
+  const item = NAVBAR_ITEMS.find((navItem) => navItem.href === href);
+  if (!item) return null;
+
+  const isActive = pathname === item.href;
+  const Icon = item.icon;
+
+  if (variant === "tab") {
+    return (
+      <Link
+        href={item.href}
+        aria-current={isActive ? "page" : undefined}
+        className={cn(
+          "flex flex-1 flex-col items-center justify-center gap-0.5 pt-1 text-[10px] font-medium leading-3 transition-colors",
+          "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset",
+          isActive ? "text-primary" : "text-muted-foreground active:opacity-60"
+        )}
+      >
+        <Icon className="size-6" strokeWidth={isActive ? 2.25 : 1.75} />
+        {item.title}
+      </Link>
+    );
+  }
 
   return (
     <Link
-      data-state={isActive}
-      className="data-[state=true]:border-primary text-xs md:text-sm data-[state=true]:text-primary text-center text-muted-foreground px-4 flex md:flex-row flex-col gap-1 md:gap-2 items-center justify-center border-b-2 border-transparent"
-      {...props}
+      href={item.href}
+      aria-current={isActive ? "page" : undefined}
+      className={cn(
+        "flex items-center gap-1.5 rounded-full px-3 py-1.5 text-subheadline transition-colors",
+        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+        isActive
+          ? "bg-secondary font-medium text-foreground"
+          : "text-muted-foreground hover:text-foreground"
+      )}
     >
-      {children}
+      <Icon className="size-4" strokeWidth={isActive ? 2.25 : 1.75} />
+      {item.title}
     </Link>
   );
 }
