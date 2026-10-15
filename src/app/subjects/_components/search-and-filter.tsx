@@ -52,42 +52,40 @@ export function SearchAndFilter({ subjects }: { subjects: Subject[] }) {
   };
 
   return (
-    <div className="flex-col gap-6 flex">
+    <div className="flex flex-col gap-6">
       <div className="flex flex-col gap-2">
-        <header className="flex flex-col">
-          <h2 className="text-accent-foreground font-medium text-lg">Buscar</h2>
-          <span className="text-sm text-muted-foreground">
-            Encontre tudo em um zap ⚡
-          </span>
-        </header>
+        <h2 className="text-[11px] font-medium uppercase tracking-wider text-muted-foreground">
+          Buscar
+        </h2>
 
         <Input
-          placeholder="Pesquisar"
+          placeholder="Nome ou código da matéria"
           type="search"
           value={search}
           onChange={(e) => handleSearch(e.target.value)}
-          className="w-full"
         />
       </div>
 
-      <div className="md:flex flex-col gap-6 hidden">
-        <header className="flex flex-col">
-          <h2 className="text-accent-foreground font-medium text-lg">Curso</h2>
-          <span className="text-sm text-muted-foreground">
-            Filtre por curso
-          </span>
-        </header>
+      <div className="hidden flex-col gap-3 md:flex">
+        <h2 className="text-[11px] font-medium uppercase tracking-wider text-muted-foreground">
+          Curso
+        </h2>
 
-        <ScrollArea className="h-96">
-          <ul className="flex flex-col gap-4">
+        <ScrollArea className="h-96 pr-3">
+          <ul className="flex flex-col gap-1">
             {availableCourses.map((course) => (
-              <li key={course} className="flex items-center gap-2">
-                <Checkbox
-                  id={course}
-                  checked={selectedCourses.includes(course)}
-                  onCheckedChange={() => handleCourseToggle(course)}
-                />
-                <Label htmlFor={course}>{course}</Label>
+              <li key={course}>
+                <Label
+                  htmlFor={course}
+                  className="flex cursor-pointer items-center gap-2.5 rounded-md px-2 py-1.5 text-sm font-normal text-muted-foreground transition-colors hover:bg-muted/60 hover:text-foreground has-[[data-state=checked]]:text-foreground"
+                >
+                  <Checkbox
+                    id={course}
+                    checked={selectedCourses.includes(course)}
+                    onCheckedChange={() => handleCourseToggle(course)}
+                  />
+                  {course}
+                </Label>
               </li>
             ))}
           </ul>
@@ -96,6 +94,7 @@ export function SearchAndFilter({ subjects }: { subjects: Subject[] }) {
 
       <Button
         variant="outline"
+        size="sm"
         onClick={handleClear}
         disabled={isPending || (!search && selectedCourses.length === 0)}
       >

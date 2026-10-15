@@ -1,9 +1,11 @@
-import { Separator } from "@/components/ui/separator";
-import { Subject } from "@/types/subjects";
-import { Fragment } from "react";
-import { SearchAndFilter } from "./_components/search-and-filter";
-import { SubjectCard } from "./_components/subject-card";
+import { EmptyState } from "@/app/_components/empty-state";
 import { SUBJECTS } from "@/data/subjects";
+import { matchesSearch } from "@/lib/search";
+import { Subject } from "@/types/subjects";
+import { SearchXIcon } from "lucide-react";
+import { SearchAndFilter } from "./_components/search-and-filter";
+import { SelectedSubjectsLink } from "./_components/selected-subjects-link";
+import { SubjectCard } from "./_components/subject-card";
 
 interface SubjectsPageProps {
   // Next.js 15+ resolves request data lazily, so `searchParams` is a promise.
@@ -17,57 +19,56 @@ export default async function SubjectsPage({
 
   const subjectsArray = Object.values(SUBJECTS);
   const selectedCourses = courses ? courses.split(",") : [];
-  const searchTerm = search?.toLowerCase();
+  const searchTerm = search?.trim();
 
   const filteredSubjects = subjectsArray.filter((subject: Subject) => {
-    const matchesSearch =
+    // Accent-insensitive, so "calculo" finds "Cálculo".
+    const matchesTerm =
       !searchTerm ||
-      subject.name.toLowerCase().includes(searchTerm) ||
-      subject.code.toLowerCase().includes(searchTerm);
+      matchesSearch(subject.name, searchTerm) ||
+      matchesSearch(subject.code, searchTerm);
 
     const matchesCourse =
       selectedCourses.length === 0 || selectedCourses.includes(subject.course);
 
-    return matchesSearch && matchesCourse;
+    return matchesTerm && matchesCourse;
   });
 
   return (
     <>
-      <aside className="flex flex-col gap-8 md:max-w-80 md:flex-1 h-fit md:sticky md:top-[calc(4rem+2rem)] bg-background">
-        <header className="flex flex-col gap-1 md:py-0 pt-4">
-          <h1 className="text-primary font-bold text-4xl md:text-3xl">
+      <aside className="flex h-fit flex-col gap-8 bg-background md:sticky md:top-24 md:max-w-80 md:flex-1">
+        <header className="flex flex-col gap-1 pt-4 md:py-0">
+          <h1 className="text-2xl font-semibold tracking-tight md:text-3xl">
             Matérias{" "}
-            <span className="font-normal text-base text-muted-foreground">
-              ({filteredSubjects.length})
+            <span className="font-mono text-base font-normal text-muted-foreground">
+              {filteredSubjects.length}
             </span>
           </h1>
-          <span className="text-accent-foreground">
-            Veja todas as matérias disponíveis
-          </span>
+          <p className="text-sm text-muted-foreground">
+            Escolha as matérias que você está cursando.
+          </p>
         </header>
 
         <SearchAndFilter subjects={subjectsArray} />
+
+        <SelectedSubjectsLink />
       </aside>
 
-      <ul className="flex flex-col flex-1 gap-2">
-        {filteredSubjects.map((subject: Subject) => {
-          return (
-            <Fragment key={subject.code}>
-              <SubjectCard {...subject} />
-              <Separator className="bg-muted" />
-            </Fragment>
-          );
-        })}
+      <ul className="flex min-w-0 flex-1 flex-col gap-3">
+        {filteredSubjects.map((subject: Subject) => (
+          <li key={subject.code}>
+            <SubjectCard {...subject} />
+          </li>
+        ))}
 
         {filteredSubjects.length === 0 && (
-          <div className="w-full py-4 flex-col flex items-center justify-center">
-            <h3 className="text-lg font-medium text-accent-foreground">
-              Eita... Algo deu errado.
-            </h3>
-            <span className="text-muted-foreground text-sm font-normal">
-              Nenhuma matéria encontrada com os filtros aplicados.
-            </span>
-          </div>
+          <li>
+            <EmptyState
+              icon={SearchXIcon}
+              title="Nenhuma matéria encontrada"
+              description="Tente outro termo de busca ou remova alguns filtros de curso."
+            />
+          </li>
         )}
       </ul>
     </>

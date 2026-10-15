@@ -1,93 +1,106 @@
 "use client";
 
+import { EmptyState } from "@/app/_components/empty-state";
 import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
+import { Skeleton } from "@/components/ui/skeleton";
+import { useHydrated } from "@/hooks/use-hydrated";
 import { useSubscribedSubjectsGradesStore } from "@/stores/subscribed-subjects-grades-store";
 import { useSubscribedSubjectsStore } from "@/stores/subscribed-subjects-store";
-import { Fragment } from "react";
-import { ExportGrades } from "./_components/export-grades";
-import { GradeSummary } from "./_components/grade-summary";
-import { ImportGradesButton } from "./_components/import-grades-button";
-import { SubjectGradesInputCard } from "./_components/subject-grades-input-card";
+import { BookOpenIcon } from "lucide-react";
+import Link from "next/link";
+import { OverviewPanel } from "./_components/overview-panel";
+import { SubjectGradesCard } from "./_components/subject-grades-card";
 
 function clamp(value: number, min: number, max: number) {
-  value = Math.max(value, min);
-  value = Math.min(value, max);
-  return value;
+  return Math.min(Math.max(value, min), max);
 }
 
 export default function GradesPage() {
   const { subscribedSubjects } = useSubscribedSubjectsStore();
   const { grades, setGrades } = useSubscribedSubjectsGradesStore();
+  const hydrated = useHydrated();
 
   const handleGradeChange = (
     subjectCode: string,
     examOrAssignment: string,
-    grade: number
+    grade: number | null
   ) => {
-    grade = clamp(grade, 0, 10);
+    const subjectGrades = { ...grades[subjectCode] };
 
-    const updatedGrades = {
-      ...grades,
-      [subjectCode]: {
-        ...grades[subjectCode],
-        [examOrAssignment]: grade,
-      },
-    };
-    setGrades(updatedGrades);
+    if (grade === null || Number.isNaN(grade)) {
+      delete subjectGrades[examOrAssignment];
+    } else {
+      subjectGrades[examOrAssignment] = clamp(grade, 0, 10);
+    }
+
+    setGrades({ ...grades, [subjectCode]: subjectGrades });
   };
 
-  const handleClearGrades = () => {
-    setGrades({});
-  };
-
-  const isSubscribedSubjectsEmpty =
-    Object.keys(subscribedSubjects).length === 0;
+  const subjects = Object.values(subscribedSubjects);
 
   return (
-    <main className="flex py-8 container gap-16 flex-col md:flex-row">
-      <aside className="flex flex-col md:max-w-[30%]">
-        {Object.keys(subscribedSubjects).length > 0 && (
-          <>
-            <GradeSummary
+    <main className="container flex w-full flex-col gap-8 py-8 md:py-12">
+      <header className="flex flex-col gap-1">
+        <h1 className="text-2xl font-semibold tracking-tight md:text-3xl">
+          Minhas notas
+        </h1>
+        <p className="text-sm text-muted-foreground">
+          Lance o que já saiu e acompanhe onde você está em cada matéria.
+        </p>
+      </header>
+
+      {!hydrated ? (
+        <GradesSkeleton />
+      ) : subjects.length === 0 ? (
+        <EmptyState
+          icon={BookOpenIcon}
+          title="Nenhuma matéria ainda"
+          description="Escolha as matérias que você está cursando e elas aparecem aqui para você lançar as notas."
+          action={
+            <Button asChild size="sm">
+              <Link href="/subjects">Escolher matérias</Link>
+            </Button>
+          }
+        />
+      ) : (
+        <div className="flex flex-col-reverse gap-8 md:flex-row md:items-start md:gap-12">
+          <ul className="flex min-w-0 flex-1 flex-col gap-3">
+            {subjects.map((subject) => (
+              <li key={subject.code}>
+                <SubjectGradesCard
+                  subject={subject}
+                  grades={grades[subject.code] ?? {}}
+                  onGradeChange={(examOrAssignment, grade) =>
+                    handleGradeChange(subject.code, examOrAssignment, grade)
+                  }
+                />
+              </li>
+            ))}
+          </ul>
+
+          <aside className="w-full shrink-0 md:max-w-xs">
+            <OverviewPanel
               subscribedSubjects={subscribedSubjects}
               grades={grades}
             />
-            <Button
-              onClick={handleClearGrades}
-              variant="outline"
-              size="lg"
-              className="rounded-none"
-            >
-              Limpar valores
-            </Button>
-            <ExportGrades />
-            <ImportGradesButton />
-          </>
-        )}
-      </aside>
-
-      <ul className="flex flex-col flex-1 gap-2">
-        {Object.values(subscribedSubjects).map((subject) => (
-          <Fragment key={subject.code}>
-            <SubjectGradesInputCard
-              subject={subject}
-              grades={grades[subject.code] || {}}
-              onGradeChange={(examOrAssignment, grade) =>
-                handleGradeChange(subject.code, examOrAssignment, grade)
-              }
-            />
-            <Separator className="bg-muted" />
-          </Fragment>
-        ))}
-
-        {isSubscribedSubjectsEmpty && (
-          <span className="text-center text-muted-foreground">
-            Você não tem nenhuma matéria inscrita ainda... Adicione matérias
-            para começar a adicionar notas!
-          </span>
-        )}
-      </ul>
+          </aside>
+        </div>
+      )}
     </main>
+  );
+}
+
+function GradesSkeleton() {
+  return (
+    <div className="flex flex-col-reverse gap-8 md:flex-row md:items-start md:gap-12">
+      <div className="flex min-w-0 flex-1 flex-col gap-3">
+        {Array.from({ length: 3 }).map((_, index) => (
+          <Skeleton key={index} className="h-32 w-full rounded-xl" />
+        ))}
+      </div>
+      <div className="w-full shrink-0 md:max-w-xs">
+        <Skeleton className="h-64 w-full rounded-xl" />
+      </div>
+    </div>
   );
 }

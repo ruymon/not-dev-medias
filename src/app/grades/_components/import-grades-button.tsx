@@ -2,47 +2,65 @@
 
 import { Button } from "@/components/ui/button";
 import { useSubscribedSubjectsGradesStore } from "@/stores/subscribed-subjects-grades-store";
+import { UploadIcon } from "lucide-react";
 import { useRef } from "react";
+import { toast } from "sonner";
 
 export function ImportGradesButton() {
-  const { setGrades } = useSubscribedSubjectsGradesStore();
+  const { grades, setGrades } = useSubscribedSubjectsGradesStore();
   const fileInputRef = useRef<HTMLInputElement>(null);
-
-  const handleImportGrades = () => {
-    if (fileInputRef.current) {
-      fileInputRef.current.click();
-    }
-  };
 
   const handleFileInput = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
+    if (!file) return;
 
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        const content = e.target?.result as string;
-        const importedGrades = JSON.parse(content);
-        setGrades(importedGrades);
-      };
-      reader.readAsText(file);
-    }
+    const reader = new FileReader();
+
+    reader.onload = (e) => {
+      const previousGrades = grades;
+
+      try {
+        const parsed = JSON.parse(e.target?.result as string);
+
+        // A malformed file used to blow up silently and wipe the store.
+        if (typeof parsed !== "object" || parsed === null) {
+          throw new Error("Unexpected shape");
+        }
+
+        setGrades(parsed);
+        toast.success("Notas importadas", {
+          action: {
+            label: "Desfazer",
+            onClick: () => setGrades(previousGrades),
+          },
+        });
+      } catch {
+        toast.error("Arquivo inválido", {
+          description: "Use um arquivo de notas exportado por aqui.",
+        });
+      }
+    };
+
+    reader.readAsText(file);
+    // Allow re-importing the same file twice in a row.
+    event.target.value = "";
   };
 
   return (
     <>
       <Button
-        onClick={handleImportGrades}
+        onClick={() => fileInputRef.current?.click()}
         variant="outline"
-        className="rounded-t-none"
-        size="lg"
+        size="sm"
       >
-        Importar notas
+        <UploadIcon className="size-3.5" />
+        Importar
       </Button>
       <input
         type="file"
         ref={fileInputRef}
         onChange={handleFileInput}
-        accept=".json"
+        accept=".json,application/json"
         className="hidden"
       />
     </>

@@ -2,6 +2,8 @@
 
 import { Button } from "@/components/ui/button";
 import { useSubscribedSubjectsGradesStore } from "@/stores/subscribed-subjects-grades-store";
+import { DownloadIcon } from "lucide-react";
+import { toast } from "sonner";
 
 export function ExportGrades() {
   const { grades } = useSubscribedSubjectsGradesStore();
@@ -13,7 +15,7 @@ export function ExportGrades() {
     if ("showSaveFilePicker" in window) {
       try {
         const handle = await window.showSaveFilePicker({
-          suggestedName: "grades.json",
+          suggestedName: "notas.json",
           types: [
             {
               description: "JSON File",
@@ -24,30 +26,34 @@ export function ExportGrades() {
         const writable = await handle.createWritable();
         await writable.write(blob);
         await writable.close();
+        toast.success("Notas exportadas");
       } catch (err) {
+        // Dismissing the save dialog is a normal outcome, not a failure.
+        if (err instanceof DOMException && err.name === "AbortError") return;
         console.error("Failed to save file:", err);
+        toast.error("Não foi possível exportar", {
+          description: "Tente novamente em instantes.",
+        });
       }
-    } else {
-      // Fallback for browsers that don't support the File System Access API
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = "grades.json";
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
+      return;
     }
+
+    // Fallback for browsers without the File System Access API.
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "notas.json";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    toast.success("Notas exportadas");
   };
 
   return (
-    <Button
-      onClick={handleExportGrades}
-      className="rounded-none"
-      variant="outline"
-      size="lg"
-    >
-      Exportar notas
+    <Button onClick={handleExportGrades} variant="outline" size="sm">
+      <DownloadIcon className="size-3.5" />
+      Exportar
     </Button>
   );
 }

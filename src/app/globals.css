@@ -23,7 +23,14 @@
   --border: 240 5.9% 90%;
   --input: 240 5.9% 90%;
   --ring: 240 10% 3.9%;
-  --radius: 0.5rem;
+  --radius: 0.75rem;
+
+  /* Grade scale: >= 6 passes, 5–6 is at risk, below 5 fails. Used as text and
+     hairline accents rather than filled blocks, so they stay quiet. */
+  --grade-pass: 160 84% 30%;
+  --grade-warn: 32 95% 38%;
+  --grade-fail: 350 79% 46%;
+
   --chart-1: 12 76% 61%;
   --chart-2: 173 58% 39%;
   --chart-3: 197 37% 24%;
@@ -51,6 +58,11 @@
   --border: 240 3.7% 15.9%;
   --input: 240 3.7% 15.9%;
   --ring: 240 4.9% 83.9%;
+
+  --grade-pass: 156 72% 52%;
+  --grade-warn: 38 92% 58%;
+  --grade-fail: 350 89% 66%;
+
   --chart-1: 220 70% 50%;
   --chart-2: 160 60% 45%;
   --chart-3: 30 80% 55%;
@@ -84,11 +96,29 @@
   --color-chart-4: hsl(var(--chart-4));
   --color-chart-5: hsl(var(--chart-5));
 
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --color-grade-pass: hsl(var(--grade-pass));
+  --color-grade-warn: hsl(var(--grade-warn));
+  --color-grade-fail: hsl(var(--grade-fail));
+
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
+
+  --animate-reveal: reveal 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+
+  @keyframes reveal {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
 }
 
 /* Tailwind v4 drops the `container` theme options, so the centered, padded
@@ -112,5 +142,34 @@
 
     /* @see https://dev.to/rashidshamloo/preventing-the-layout-shift-caused-by-scrollbars-2flp */
     @apply pl-[calc(100vw-100%)];
+  }
+
+  /* Figures line up in columns wherever they are compared. */
+  .font-mono,
+  input[type="number"] {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* The spinners fight the fixed-width grade fields. */
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }

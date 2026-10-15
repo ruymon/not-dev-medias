@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 export default function SubjectsLayout({ children }: { children: ReactNode }) {
   return (
-    <main className="flex flex-col md:flex-row py-8 container md:gap-16 gap-8">
+    <main className="container flex flex-col gap-8 py-8 md:flex-row md:gap-12 md:py-12">
       {children}
     </main>
   );

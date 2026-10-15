@@ -3,18 +3,25 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { MobileNavbar } from "./_components/mobile-navbar";
 
-const fontSans = FontSans({
+const fontSans = Geist({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-geist-sans",
+});
+
+// Grades are read in columns, so every numeral renders in a mono face.
+const fontMono = Geist_Mono({
+  subsets: ["latin"],
+  variable: "--font-geist-mono",
 });
 
 export const metadata: Metadata = {
   title: "Não é o Dev Médias",
-  description: "",
+  description:
+    "Calcule suas médias da Mauá sem encheção de saco. Escolha suas matérias, lance as notas e veja onde você está.",
 };
 
 export default function RootLayout({
@@ -27,7 +34,11 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased flex flex-col",
-          fontSans.variable
+          // The mobile navbar is fixed to the bottom, so content needs room
+          // to scroll clear of it.
+          "pb-20 md:pb-0",
+          fontSans.variable,
+          fontMono.variable
         )}
       >
         <ThemeProvider>
