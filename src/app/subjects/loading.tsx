@@ -2,7 +2,9 @@ import { Separator } from "@/components/ui/separator";
 import { SearchAndFilterSkeleton } from "./_components/search-and-filter-skeleton";
 import { SubjectCardSkeleton } from "./_components/subject-card-skeleton";
 
-export default function SubjectsLoading() {
+interface SubjectsLoadingProps {}
+
+export default function SubjectsLoading({}: SubjectsLoadingProps) {
   return (
     <>
       <aside className="flex flex-col gap-8 md:max-w-80 md:flex-1 h-fit md:sticky md:top-[calc(4rem+2rem)] bg-background">

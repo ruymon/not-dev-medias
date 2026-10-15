@@ -4,7 +4,9 @@ import { Button } from "@/components/ui/button";
 import { useSubscribedSubjectsGradesStore } from "@/stores/subscribed-subjects-grades-store";
 import { useRef } from "react";
 
-export function ImportGradesButton() {
+interface ImportGradesButtonProps {}
+
+export function ImportGradesButton({}: ImportGradesButtonProps) {
   const { setGrades } = useSubscribedSubjectsGradesStore();
   const fileInputRef = useRef<HTMLInputElement>(null);
 

@@ -23,7 +23,9 @@ import { useState } from "react";
 import { toast } from "sonner";
 import { HighlightText } from "./highlight-text";
 
-export function SubjectCard(subject: Subject) {
+interface SubjectCardProps extends Subject {}
+
+export function SubjectCard(subject: SubjectCardProps) {
   const { addSubscribedSubject, removeSubscribedSubject, subscribedSubjects } =
     useSubscribedSubjectsStore();
 
