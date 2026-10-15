@@ -6,28 +6,27 @@ import { SubjectCard } from "./_components/subject-card";
 import { SUBJECTS } from "@/data/subjects";
 
 interface SubjectsPageProps {
-  searchParams: { search?: string; courses?: string };
+  // Next.js 15+ resolves request data lazily, so `searchParams` is a promise.
+  searchParams: Promise<{ search?: string; courses?: string }>;
 }
 
 export default async function SubjectsPage({
   searchParams,
 }: SubjectsPageProps) {
-  const subjectsData = SUBJECTS;
-  const subjectsArray = Object.values(subjectsData);
+  const { search, courses } = await searchParams;
 
-  const selectedCourses = searchParams.courses
-    ? searchParams.courses.split(",")
-    : [];
+  const subjectsArray = Object.values(SUBJECTS);
+  const selectedCourses = courses ? courses.split(",") : [];
+  const searchTerm = search?.toLowerCase();
 
   const filteredSubjects = subjectsArray.filter((subject: Subject) => {
     const matchesSearch =
-      !searchParams.search ||
-      subject.name.toLowerCase().includes(searchParams.search.toLowerCase()) ||
-      subject.code.toLowerCase().includes(searchParams.search.toLowerCase());
+      !searchTerm ||
+      subject.name.toLowerCase().includes(searchTerm) ||
+      subject.code.toLowerCase().includes(searchTerm);
 
     const matchesCourse =
-      selectedCourses.length === 0 ||
-      selectedCourses.some((course) => subject.course === course);
+      selectedCourses.length === 0 || selectedCourses.includes(subject.course);
 
     return matchesSearch && matchesCourse;
   });
