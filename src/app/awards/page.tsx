@@ -1,6 +1,4 @@
-interface AwardsPageProps {}
-
-export default function AwardsPage({}: AwardsPageProps) {
+export default function AwardsPage() {
   return (
     <main className="flex py-8 px-6 max-w-5xl mx-auto w-full gap-8">
       <header className="flex flex-col gap-1">
