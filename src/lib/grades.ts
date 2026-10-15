@@ -1,22 +1,40 @@
-import { Grades, SubjectGrades } from "@/types/grades";
-import { Subject, Subjects } from "@/types/subjects";
+import { SubjectGrades } from "@/types/grades";
+import { Subject } from "@/types/subjects";
 
 export type GradeStatus = "pass" | "warn" | "fail";
 
+export const PASSING_GRADE = 6;
+const AT_RISK_GRADE = 5;
+const MAX_GRADE = 10;
+
 export interface SubjectGradeSummary {
   /**
-   * Weighted grade counting every unfilled item as zero — the média you'd end
-   * up with if nothing else were graded. `null` while the subject is untouched,
-   * so the UI can say "sem notas" instead of showing a failing 0.00.
+   * Weighted grade counting every unfilled item as zero — the points already
+   * banked. `null` while the subject is untouched.
    */
   grade: number | null;
   /** Share of the subject's total weight that already has a grade, 0 to 1. */
   completion: number;
-  status: GradeStatus | null;
+  /** Points (0–10 scale) banked from exams and from assignments. */
+  examPoints: number;
+  assignmentPoints: number;
 }
 
-const PASSING_GRADE = 6;
-const AT_RISK_GRADE = 5;
+/**
+ * Where a subject stands, in the terms a student cares about: is it over,
+ * and if not, what do I still need?
+ */
+export type SubjectOutlook =
+  | { kind: "empty" }
+  /** Everything is graded. */
+  | { kind: "final"; grade: number; status: GradeStatus }
+  /** Points already banked reach 6, whatever comes next. */
+  | { kind: "secured"; grade: number }
+  /** `average` is the média of what's graded so far; `needed` is the average
+      the ungraded items must reach for a 6. */
+  | { kind: "pending"; average: number; needed: number }
+  /** Not even 10 on everything left gets to 6. */
+  | { kind: "unreachable"; average: number };
 
 export function getGradeStatus(grade: number): GradeStatus {
   if (grade >= PASSING_GRADE) return "pass";
@@ -53,45 +71,67 @@ export function calculateSubjectGrade(
   const examShare = subject.examWeight / 100;
   const assignmentShare = subject.assignmentWeight / 100;
 
-  const completion =
-    exams.filled * examShare + assignments.filled * assignmentShare;
-
-  if (completion === 0) {
-    return { grade: null, completion: 0, status: null };
-  }
-
-  const grade = exams.total * examShare + assignments.total * assignmentShare;
+  const completion = Math.min(
+    exams.filled * examShare + assignments.filled * assignmentShare,
+    1
+  );
+  const examPoints = exams.total * examShare;
+  const assignmentPoints = assignments.total * assignmentShare;
 
   return {
-    grade,
-    completion: Math.min(completion, 1),
-    status: getGradeStatus(grade),
+    grade: completion === 0 ? null : examPoints + assignmentPoints,
+    completion,
+    examPoints,
+    assignmentPoints,
   };
 }
 
-/** Average across the subjects that have at least one grade entered. */
-export function calculateOverallAverage(
-  subscribedSubjects: Subjects,
-  grades: Grades
-): { average: number | null; gradedCount: number; totalCount: number } {
-  const subjects = Object.values(subscribedSubjects);
+// Weights like 1/3 never sum to exactly 1.
+const EPSILON = 1e-6;
 
-  const gradedSubjects = subjects
-    .map((subject) => calculateSubjectGrade(subject, grades[subject.code]))
-    .filter((summary) => summary.grade !== null);
+export function getSubjectOutlook(summary: SubjectGradeSummary): SubjectOutlook {
+  const { grade, completion } = summary;
 
-  if (gradedSubjects.length === 0) {
-    return { average: null, gradedCount: 0, totalCount: subjects.length };
+  if (grade === null) return { kind: "empty" };
+
+  if (completion >= 1 - EPSILON) {
+    return { kind: "final", grade, status: getGradeStatus(grade) };
   }
 
-  const sum = gradedSubjects.reduce(
-    (total, summary) => total + (summary.grade ?? 0),
-    0
-  );
+  if (grade >= PASSING_GRADE - EPSILON) return { kind: "secured", grade };
 
-  return {
-    average: sum / gradedSubjects.length,
-    gradedCount: gradedSubjects.length,
-    totalCount: subjects.length,
-  };
+  const average = grade / completion;
+  const needed = (PASSING_GRADE - grade) / (1 - completion);
+
+  if (needed > MAX_GRADE + EPSILON) return { kind: "unreachable", average };
+
+  return { kind: "pending", average, needed };
+}
+
+/** Whether the subject is below 6 or still has ground to cover to get there. */
+export function needsAttention(outlook: SubjectOutlook) {
+  return (
+    outlook.kind === "pending" ||
+    outlook.kind === "unreachable" ||
+    (outlook.kind === "final" && outlook.status !== "pass")
+  );
+}
+
+const gradeFormatter = new Intl.NumberFormat("pt-BR", {
+  minimumFractionDigits: 1,
+  maximumFractionDigits: 1,
+});
+
+/**
+ * One decimal, Brazilian style ("5,9"). Rounds toward the safe side so a
+ * displayed grade never contradicts its status: a 5.96 shows as 5,9 rather
+ * than a "6,0" that hasn't passed, and a needed 7.21 shows as 7,3.
+ */
+export function formatGrade(value: number, round: "down" | "up" = "down") {
+  const scaled = value * 10;
+  const rounded =
+    round === "down"
+      ? Math.floor(scaled + EPSILON)
+      : Math.ceil(scaled - EPSILON);
+  return gradeFormatter.format(rounded / 10);
 }

@@ -1,6 +1,5 @@
 "use client";
 
-import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
 interface GradeInputProps {
@@ -21,43 +20,33 @@ export function GradeInput({
 }: GradeInputProps) {
   return (
     <div className="flex flex-col gap-1.5">
-      <div className="flex items-baseline justify-between gap-2">
-        <Label
-          htmlFor={id}
-          className="truncate text-xs font-medium text-foreground"
-        >
+      <div className="flex items-baseline justify-between gap-2 px-1">
+        <Label htmlFor={id} className="truncate text-footnote font-semibold">
           {name}
         </Label>
-        <span className="shrink-0 font-mono text-[11px] text-muted-foreground">
+        <span className="shrink-0 text-footnote tabular-nums text-muted-foreground">
           {Math.round(weight * 100)}%
         </span>
       </div>
 
-      <div className="relative">
-        <Input
-          id={id}
-          type="number"
-          inputMode="decimal"
-          min="0"
-          max="10"
-          step="0.1"
-          placeholder="—"
-          // `?? ""` and not `|| ""`: a legitimate 0 must still render.
-          value={value ?? ""}
-          onChange={(event) => {
-            const raw = event.target.value;
-            // Clearing the field should drop the grade, not store a zero.
-            onChange(raw === "" ? null : Number(raw));
-          }}
-          className="h-10 pr-9 font-mono text-sm tabular-nums"
-        />
-        <span
-          aria-hidden
-          className="pointer-events-none absolute inset-y-0 right-3 flex items-center font-mono text-xs text-muted-foreground/70"
-        >
-          /10
-        </span>
-      </div>
+      <input
+        id={id}
+        type="number"
+        inputMode="decimal"
+        min="0"
+        max="10"
+        step="0.1"
+        placeholder="–"
+        // `?? ""` and not `|| ""`: a legitimate 0 must still render.
+        value={value ?? ""}
+        onChange={(event) => {
+          const raw = event.target.value;
+          // Clearing the field should drop the grade, not store a zero.
+          onChange(raw === "" ? null : Number(raw));
+        }}
+        // 17px keeps iOS from zooming the page when the field takes focus.
+        className="h-11 w-full rounded-[10px] bg-background px-3 text-center text-body tabular-nums placeholder:text-tertiary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring dark:bg-secondary"
+      />
     </div>
   );
 }

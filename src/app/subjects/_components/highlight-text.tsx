@@ -12,7 +12,7 @@ export function HighlightText({ text, searchTerm }: HighlightTextProps) {
     segment.isMatch ? (
       <mark
         key={index}
-        className="rounded-[3px] bg-foreground/10 px-0.5 text-foreground"
+        className="rounded-[3px] bg-primary/15 text-foreground"
       >
         {segment.value}
       </mark>
