@@ -1,8 +1,9 @@
-import { Badge, BadgeProps } from "@/components/ui/badge";
+import type { VariantProps } from "class-variance-authority";
+import { Badge, type badgeVariants } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { calculateSubjectGrade } from "@/lib/grades";
-import { Grades } from "@/types/grades";
-import { Subjects } from "@/types/subjects";
+import type { Grades } from "@/types/grades";
+import type { Subjects } from "@/types/subjects";
 
 interface GradeSummaryProps {
   subscribedSubjects: Subjects;
@@ -27,12 +28,12 @@ export function GradeSummary({
             ? 0
             : calculateSubjectGrade(subject, grades[subject.code]);
 
-          const badgeVariant: BadgeProps["variant"] =
+          const badgeVariant: VariantProps<typeof badgeVariants>["variant"] =
             subjectGrade >= 6
               ? "success"
               : subjectGrade >= 5
-              ? "warning"
-              : "danger";
+                ? "warning"
+                : "danger";
           return (
             <div
               key={subject.code}

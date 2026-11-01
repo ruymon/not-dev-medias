@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import {
   Card,
   CardContent,
@@ -14,9 +15,8 @@ import {
 } from "@/components/ui/collapsible";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { SubjectGrades } from "@/types/grades";
-import { Subject } from "@/types/subjects";
-import { useState } from "react";
+import type { SubjectGrades } from "@/types/grades";
+import type { Subject } from "@/types/subjects";
 
 interface SubjectGradesInputCardProps {
   subject: Subject;
@@ -35,7 +35,7 @@ export function SubjectGradesInputCard({
     <Card className="border-none py-4 flex flex-col shadow-none">
       <Collapsible open={isGradesPanelOpen} onOpenChange={setIsGradesPanelOpen}>
         <div className="flex items-center justify-between">
-          <CardHeader className="space-y-0 p-0">
+          <CardHeader className="flex-1 gap-0 p-0">
             <CardDescription>{subject.code}</CardDescription>
             <CardTitle className="text-secondary-foreground text-xl font-bold">
               {subject.name}

@@ -52,7 +52,7 @@ export function SubjectCard({ subject, searchTerm }: SubjectCardProps) {
   return (
     <Card className="border-none py-4 flex flex-col gap-2 shadow-none">
       <div className="flex items-center justify-between">
-        <CardHeader className="space-y-0 p-0">
+        <CardHeader className="flex-1 gap-0 p-0">
           <CardDescription>
             <HighlightText text={subject.code} searchTerm={searchTerm} />
           </CardDescription>
