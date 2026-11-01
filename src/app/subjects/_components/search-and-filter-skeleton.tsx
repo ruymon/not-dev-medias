@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Skeleton } from "@/components/ui/skeleton";
-import { getSkeletonWidth } from "@/lib/utils";
 
 export function SearchAndFilterSkeleton() {
   return (
@@ -33,21 +32,12 @@ export function SearchAndFilterSkeleton() {
 
         <ScrollArea className="h-96">
           <ul className="flex flex-col gap-4">
-            {Array.from({ length: 16 }).map((_, index) => {
-              const width = getSkeletonWidth(index);
-
-              return (
-                <li key={index} className="flex items-center gap-2 h-4">
-                  <Skeleton className="h-full aspect-square rounded-sm" />
-                  <Skeleton
-                    className="h-full"
-                    style={{
-                      width: width,
-                    }}
-                  />
-                </li>
-              );
-            })}
+            {Array.from({ length: 16 }).map((_, index) => (
+              <li key={index} className="group flex items-center gap-2 h-4">
+                <Skeleton className="h-full aspect-square rounded-sm" />
+                <Skeleton className="h-full w-3/4 group-nth-[3n+2]:w-1/2 group-nth-[3n]:w-2/3" />
+              </li>
+            ))}
           </ul>
         </ScrollArea>
       </div>

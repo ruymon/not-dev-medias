@@ -88,8 +88,8 @@ async function SubjectsList({ searchParams }: { searchParams: SearchParams }) {
 
 function SubjectsListSkeleton() {
   return Array.from({ length: 10 }).map((_, index) => (
-    <li key={index}>
-      <SubjectCardSkeleton index={index} />
+    <li key={index} className="group">
+      <SubjectCardSkeleton />
       <Separator className="bg-muted/50" />
     </li>
   ));
