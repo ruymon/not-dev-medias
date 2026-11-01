@@ -1,9 +1,9 @@
 import { Card, CardFooter, CardHeader } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
-import { getRandomWidthPercentage } from "@/lib/utils";
+import { getSkeletonWidth } from "@/lib/utils";
 
-export function SubjectCardSkeleton() {
-  const titleWidth = getRandomWidthPercentage();
+export function SubjectCardSkeleton({ index }: { index: number }) {
+  const titleWidth = getSkeletonWidth(index);
 
   return (
     <Card className="border-none py-5 flex flex-col gap-2 shadow-none">

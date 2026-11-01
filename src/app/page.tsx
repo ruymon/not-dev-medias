@@ -1,3 +1,5 @@
+export const instant = true;
+
 export default function HomePage() {
   return (
     <main className="flex flex-col justify-center items-start flex-1 px-6 w-full gap-16">

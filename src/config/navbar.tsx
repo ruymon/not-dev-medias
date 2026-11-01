@@ -4,8 +4,16 @@ import {
   MedalIcon,
   SchoolIcon,
 } from "lucide-react";
+import type { Route } from "next";
+import type { ReactNode } from "react";
 
-export const NAVBAR_ITEMS = [
+interface NavbarItem {
+  title: string;
+  href: Route;
+  icon: ReactNode;
+}
+
+export const NAVBAR_ITEMS: NavbarItem[] = [
   {
     title: "Home",
     href: "/",

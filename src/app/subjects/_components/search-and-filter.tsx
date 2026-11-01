@@ -5,11 +5,10 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Subject } from "@/types/subjects";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useMemo, useState, useTransition } from "react";
+import { useState, useTransition } from "react";
 
-export function SearchAndFilter({ subjects }: { subjects: Subject[] }) {
+export function SearchAndFilter({ courses }: { courses: string[] }) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [isPending, startTransition] = useTransition();
@@ -17,10 +16,6 @@ export function SearchAndFilter({ subjects }: { subjects: Subject[] }) {
   const [search, setSearch] = useState(searchParams.get("search") || "");
   const [selectedCourses, setSelectedCourses] = useState<string[]>(
     searchParams.get("courses")?.split(",") || []
-  );
-  const availableCourses = useMemo(
-    () => [...new Set(subjects.map((subject) => subject.course).filter(Boolean))],
-    [subjects]
   );
 
   const handleSearch = (term: string) => {
@@ -36,19 +31,20 @@ export function SearchAndFilter({ subjects }: { subjects: Subject[] }) {
     updateURL(search, updatedCourses);
   };
 
-  const updateURL = (searchTerm: string, courses: string[]) => {
+  const updateURL = (searchTerm: string, coursesToFilter: string[]) => {
     startTransition(() => {
       const params = new URLSearchParams();
       if (searchTerm) params.set("search", searchTerm);
-      if (courses.length > 0) params.set("courses", courses.join(","));
-      router.replace(`/subjects?${params.toString()}`);
+      if (coursesToFilter.length > 0)
+        params.set("courses", coursesToFilter.join(","));
+      router.replace(`/subjects?${params.toString()}`, { scroll: false });
     });
   };
 
   const handleClear = () => {
     setSearch("");
     setSelectedCourses([]);
-    router.replace("/subjects");
+    router.replace("/subjects", { scroll: false });
   };
 
   return (
@@ -80,7 +76,7 @@ export function SearchAndFilter({ subjects }: { subjects: Subject[] }) {
 
         <ScrollArea className="h-96">
           <ul className="flex flex-col gap-4">
-            {availableCourses.map((course) => (
+            {courses.map((course) => (
               <li key={course} className="flex items-center gap-2">
                 <Checkbox
                   id={course}

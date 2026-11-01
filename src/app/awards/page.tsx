@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Insígnias",
+};
+
+export const instant = true;
+
 export default function AwardsPage() {
   return (
     <main className="flex py-8 px-6 max-w-5xl mx-auto w-full gap-8">

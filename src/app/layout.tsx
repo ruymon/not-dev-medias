@@ -1,4 +1,4 @@
-import { DesktopNavbar } from "@/app/_components/desktop-navbar";
+import { DesktopNavbar } from "./_components/desktop-navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import { cn } from "@/lib/utils";
@@ -13,15 +13,15 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: "Não é o Dev Médias",
-  description: "",
+  title: {
+    default: "Não é o Dev Médias",
+    template: "%s · Não é o Dev Médias",
+  },
+  description:
+    "Um site sem complicações para calcular suas médias da Mauá.",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="pt-BR" suppressHydrationWarning>
       <body

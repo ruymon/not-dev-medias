@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Skeleton } from "@/components/ui/skeleton";
-import { getRandomWidthPercentage } from "@/lib/utils";
+import { getSkeletonWidth } from "@/lib/utils";
 
 export function SearchAndFilterSkeleton() {
   return (
@@ -34,7 +34,7 @@ export function SearchAndFilterSkeleton() {
         <ScrollArea className="h-96">
           <ul className="flex flex-col gap-4">
             {Array.from({ length: 16 }).map((_, index) => {
-              const width = getRandomWidthPercentage();
+              const width = getSkeletonWidth(index);
 
               return (
                 <li key={index} className="flex items-center gap-2 h-4">

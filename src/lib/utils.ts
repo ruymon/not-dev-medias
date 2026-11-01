@@ -5,11 +5,12 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export function getRandomWidthPercentage() {
-  const percentage = Math.floor(Math.random() * 75) + 25;
-  return `${percentage}%`;
-}
+const SKELETON_WIDTHS = ["72%", "45%", "88%", "60%", "35%", "80%", "52%", "66%"];
 
-export function sleep(ms: number) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
+/**
+ * Varied but deterministic widths, so skeletons can be prerendered into the
+ * static shell (random values would differ between renders).
+ */
+export function getSkeletonWidth(index: number) {
+  return SKELETON_WIDTHS[index % SKELETON_WIDTHS.length];
 }

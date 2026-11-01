@@ -6,7 +6,9 @@ interface HighlightTextProps {
 export function HighlightText({ text, searchTerm }: HighlightTextProps) {
   if (!searchTerm) return text;
 
-  const parts = text.split(new RegExp(`(${searchTerm})`, "gi"));
+  // Escape the term so characters like "(" or "+" match literally.
+  const escapedTerm = searchTerm.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const parts = text.split(new RegExp(`(${escapedTerm})`, "gi"));
 
   return parts.map((part, index) =>
     part.toLowerCase() === searchTerm ? (

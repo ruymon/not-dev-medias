@@ -18,19 +18,20 @@ import {
 import { useSubscribedSubjectsStore } from "@/stores/subscribed-subjects-store";
 
 import { Subject } from "@/types/subjects";
-import { useSearchParams } from "next/navigation";
 import { useState } from "react";
 import { toast } from "sonner";
 import { HighlightText } from "./highlight-text";
 
-export function SubjectCard(subject: Subject) {
+interface SubjectCardProps {
+  subject: Subject;
+  searchTerm?: string;
+}
+
+export function SubjectCard({ subject, searchTerm }: SubjectCardProps) {
   const { addSubscribedSubject, removeSubscribedSubject, subscribedSubjects } =
     useSubscribedSubjectsStore();
 
   const [isMoreDetailsOpen, setIsMoreDetailsOpen] = useState(false);
-
-  const searchParams = useSearchParams();
-  const searchTerm = searchParams.get("search")?.toLowerCase();
 
   const isSubjectSubscribed = subscribedSubjects[subject.code];
 
