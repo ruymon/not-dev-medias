@@ -1,0 +1,28 @@
+import { NAVBAR_ITEMS } from "@/config/navbar";
+import { NavLink } from "./nav-link";
+import { ThemeToggle } from "./theme-toggle";
+
+export function Navbar() {
+  return (
+    <header className="z-10 md:sticky md:top-0 md:h-16 md:w-full md:bg-background/50 md:backdrop-blur-xl">
+      <div className="md:container md:flex md:h-full md:items-center md:justify-between">
+        <span className="hidden text-primary font-bold text-xl tracking-wide md:inline">
+          Não é o Dev Médias
+        </span>
+
+        <nav className="fixed inset-x-0 bottom-0 z-10 flex h-16 justify-around bg-background/50 backdrop-blur-xl md:static md:h-full md:w-fit md:bg-transparent md:backdrop-blur-none">
+          {NAVBAR_ITEMS.map(({ href, icon, title }) => (
+            <NavLink key={href} href={href}>
+              {icon}
+              <span>{title}</span>
+            </NavLink>
+          ))}
+        </nav>
+
+        <div className="hidden md:block">
+          <ThemeToggle />
+        </div>
+      </div>
+    </header>
+  );
+}

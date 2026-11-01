@@ -1,11 +1,10 @@
-import { DesktopNavbar } from "./_components/desktop-navbar";
+import type { Metadata } from "next";
+import { Inter as FontSans } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import { cn } from "@/lib/utils";
-import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google";
+import { Navbar } from "./_components/navbar";
 import "./globals.css";
-import { MobileNavbar } from "./_components/mobile-navbar";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -17,8 +16,7 @@ export const metadata: Metadata = {
     default: "Não é o Dev Médias",
     template: "%s · Não é o Dev Médias",
   },
-  description:
-    "Um site sem complicações para calcular suas médias da Mauá.",
+  description: "Um site sem complicações para calcular suas médias da Mauá.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -27,12 +25,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased flex flex-col",
-          fontSans.variable
+          fontSans.variable,
         )}
       >
         <ThemeProvider>
-          <DesktopNavbar />
-          <MobileNavbar />
+          <Navbar />
           {children}
           <Toaster />
         </ThemeProvider>
