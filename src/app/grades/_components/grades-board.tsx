@@ -1,10 +1,10 @@
 "use client";
 
+import { Fragment } from "react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { useSubscribedSubjectsGradesStore } from "@/stores/subscribed-subjects-grades-store";
 import { useSubscribedSubjectsStore } from "@/stores/subscribed-subjects-store";
-import { Fragment } from "react";
 import { ExportGrades } from "./export-grades";
 import { GradeSummary } from "./grade-summary";
 import { ImportGradesButton } from "./import-grades-button";
@@ -23,7 +23,7 @@ export function GradesBoard() {
   const handleGradeChange = (
     subjectCode: string,
     examOrAssignment: string,
-    grade: number
+    grade: number,
   ) => {
     grade = clamp(grade, 0, 10);
 

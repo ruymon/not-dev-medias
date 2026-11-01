@@ -1,8 +1,8 @@
 "use client";
 
+import { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { useSubscribedSubjectsGradesStore } from "@/stores/subscribed-subjects-grades-store";
-import { useRef } from "react";
 
 export function ImportGradesButton() {
   const { setGrades } = useSubscribedSubjectsGradesStore();
