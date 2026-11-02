@@ -18,7 +18,7 @@ import {
 	CollapsibleContent,
 	CollapsibleTrigger,
 } from "@/components/ui/collapsible";
-import { COURSES } from "@/data/courses";
+import { COURSES } from "@/data/subjects";
 import { assessmentGroups } from "@/lib/grades";
 import { useSubscribedSubjectsStore } from "@/stores/subscribed-subjects-store";
 import type { Subject } from "@/types/subjects";

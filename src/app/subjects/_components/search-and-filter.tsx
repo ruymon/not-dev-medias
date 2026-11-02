@@ -7,7 +7,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { COURSES } from "@/data/courses";
+import { COURSES } from "@/data/subjects";
 
 export function SearchAndFilter() {
 	const router = useRouter();

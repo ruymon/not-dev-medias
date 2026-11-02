@@ -1,0 +1,130 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"type": "object",
+	"properties": {
+		"$schema": {
+			"type": "string"
+		},
+		"courses": {
+			"type": "object",
+			"propertyNames": {
+				"type": "string",
+				"pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+			},
+			"additionalProperties": {
+				"type": "string",
+				"minLength": 1
+			},
+			"description": "Cursos: id → nome exibido."
+		},
+		"subjects": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"code": {
+						"type": "string",
+						"pattern": "^[A-Z]{3,4}\\d{2,3}$",
+						"description": "Código da matéria na Mauá, ex.: ECM251."
+					},
+					"name": {
+						"type": "string",
+						"minLength": 1
+					},
+					"course": {
+						"description": "Id de um curso em `courses`, ou null se não houver.",
+						"type": [
+							"string",
+							"null"
+						]
+					},
+					"period": {
+						"anyOf": [
+							{
+								"type": "string",
+								"enum": [
+									"annual",
+									"semester"
+								]
+							},
+							{
+								"type": "null"
+							}
+						],
+						"description": "annual (anual) ou semester (semestral)."
+					},
+					"exams": {
+						"type": "object",
+						"properties": {
+							"weight": {
+								"type": "number",
+								"exclusiveMinimum": 0,
+								"maximum": 1,
+								"description": "Peso de provas na média final, entre 0 e 1 (ex.: 0.7 para 70%)."
+							},
+							"items": {
+								"type": "object",
+								"propertyNames": {
+									"type": "string",
+									"pattern": "^P\\d+$"
+								},
+								"additionalProperties": {
+									"type": "number",
+									"exclusiveMinimum": 0,
+									"maximum": 1
+								},
+								"description": "Cada avaliação e seu peso dentro de provas. Os pesos somam 1."
+							}
+						},
+						"required": [
+							"weight",
+							"items"
+						],
+						"additionalProperties": false
+					},
+					"assignments": {
+						"type": "object",
+						"properties": {
+							"weight": {
+								"type": "number",
+								"exclusiveMinimum": 0,
+								"maximum": 1,
+								"description": "Peso de trabalhos na média final, entre 0 e 1 (ex.: 0.7 para 70%)."
+							},
+							"items": {
+								"type": "object",
+								"propertyNames": {
+									"type": "string",
+									"pattern": "^T\\d+$"
+								},
+								"additionalProperties": {
+									"type": "number",
+									"exclusiveMinimum": 0,
+									"maximum": 1
+								},
+								"description": "Cada avaliação e seu peso dentro de trabalhos. Os pesos somam 1."
+							}
+						},
+						"required": [
+							"weight",
+							"items"
+						],
+						"additionalProperties": false
+					}
+				},
+				"required": [
+					"code",
+					"name",
+					"course",
+					"period"
+				],
+				"additionalProperties": false
+			}
+		}
+	},
+	"required": [
+		"courses",
+		"subjects"
+	],
+	"additionalProperties": false
+}

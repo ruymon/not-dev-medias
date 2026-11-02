@@ -10,7 +10,9 @@
 		"build": "next build",
 		"start": "next start",
 		"lint": "biome check",
-		"format": "biome check --write"
+		"format": "biome check --write",
+		"data:check": "bun scripts/check-data.ts",
+		"data:schema": "bun scripts/check-data.ts --write"
 	},
 	"dependencies": {
 		"class-variance-authority": "^0.7.1",
@@ -23,6 +25,7 @@
 		"react-dom": "^19.3.1",
 		"shadcn": "^4.23.0",
 		"sonner": "^2.0.8",
+		"zod": "^4.6.7",
 		"zustand": "^5.0.16"
 	},
 	"devDependencies": {

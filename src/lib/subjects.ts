@@ -1,8 +1,19 @@
 import { cacheLife } from "next/cache";
-import { COURSES } from "@/data/courses";
-import { SUBJECTS } from "@/data/subjects";
+import { catalogueSchema, formatCatalogueIssues } from "@/data/schema";
+import { COURSES, SUBJECTS } from "@/data/subjects";
+import data from "@/data/subjects.json";
 import type { CourseId, Subject } from "@/types/subjects";
 import { normalizeText } from "./text";
+
+const validation = catalogueSchema.safeParse(data);
+if (!validation.success) {
+	throw new Error(
+		[
+			"src/data/subjects.json é inválido:",
+			...formatCatalogueIssues(validation.error, data),
+		].join("\n"),
+	);
+}
 
 export interface SubjectsFilter {
 	search: string;

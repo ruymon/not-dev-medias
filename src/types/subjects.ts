@@ -1,17 +1,7 @@
-import type { COURSES } from "@/data/courses";
+import type { Catalogue } from "@/data/schema";
 
-export type CourseId = keyof typeof COURSES;
+export type Subject = Catalogue["subjects"][number];
 
-export interface AssessmentGroup {
-	weight: number;
-	items: Record<string, number>;
-}
+export type AssessmentGroup = NonNullable<Subject["exams"]>;
 
-export interface Subject {
-	code: string;
-	name: string;
-	course: CourseId | null;
-	period: "annual" | "semester" | null;
-	exams?: AssessmentGroup;
-	assignments?: AssessmentGroup;
-}
+export type CourseId = keyof Catalogue["courses"];
