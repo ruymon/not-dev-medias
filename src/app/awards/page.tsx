@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Insígnias",
+	title: "Insígnias",
 };
 
 export const instant = true;
 
 export default function AwardsPage() {
-  return (
-    <main className="flex py-8 px-6 max-w-5xl mx-auto w-full gap-8">
-      <header className="flex flex-col gap-1">
-        <h1 className="text-primary font-bold text-3xl">Insígnias</h1>
-        <span className="text-accent-foreground">
-          Ganhe medalhas ao completar desafios
-        </span>
-      </header>
-    </main>
-  );
+	return (
+		<main className="flex py-8 px-6 max-w-5xl mx-auto w-full gap-8">
+			<header className="flex flex-col gap-1">
+				<h1 className="text-primary font-bold text-3xl">Insígnias</h1>
+				<span className="text-accent-foreground">
+					Ganhe medalhas ao completar desafios
+				</span>
+			</header>
+		</main>
+	);
 }

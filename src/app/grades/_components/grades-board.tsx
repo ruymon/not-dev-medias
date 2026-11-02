@@ -11,83 +11,83 @@ import { ImportGradesButton } from "./import-grades-button";
 import { SubjectGradesInputCard } from "./subject-grades-input-card";
 
 function clamp(value: number, min: number, max: number) {
-  value = Math.max(value, min);
-  value = Math.min(value, max);
-  return value;
+	value = Math.max(value, min);
+	value = Math.min(value, max);
+	return value;
 }
 
 export function GradesBoard() {
-  const { subscribedSubjects } = useSubscribedSubjectsStore();
-  const { grades, setGrades } = useSubscribedSubjectsGradesStore();
+	const { subscribedSubjects } = useSubscribedSubjectsStore();
+	const { grades, setGrades } = useSubscribedSubjectsGradesStore();
 
-  const handleGradeChange = (
-    subjectCode: string,
-    examOrAssignment: string,
-    grade: number,
-  ) => {
-    grade = clamp(grade, 0, 10);
+	const handleGradeChange = (
+		subjectCode: string,
+		examOrAssignment: string,
+		grade: number,
+	) => {
+		grade = clamp(grade, 0, 10);
 
-    const updatedGrades = {
-      ...grades,
-      [subjectCode]: {
-        ...grades[subjectCode],
-        [examOrAssignment]: grade,
-      },
-    };
-    setGrades(updatedGrades);
-  };
+		const updatedGrades = {
+			...grades,
+			[subjectCode]: {
+				...grades[subjectCode],
+				[examOrAssignment]: grade,
+			},
+		};
+		setGrades(updatedGrades);
+	};
 
-  const handleClearGrades = () => {
-    setGrades({});
-  };
+	const handleClearGrades = () => {
+		setGrades({});
+	};
 
-  const isSubscribedSubjectsEmpty =
-    Object.keys(subscribedSubjects).length === 0;
+	const isSubscribedSubjectsEmpty =
+		Object.keys(subscribedSubjects).length === 0;
 
-  return (
-    <main className="flex py-8 container gap-16 flex-col md:flex-row">
-      <aside className="flex flex-col md:max-w-[30%]">
-        {Object.keys(subscribedSubjects).length > 0 && (
-          <>
-            <GradeSummary
-              subscribedSubjects={subscribedSubjects}
-              grades={grades}
-            />
-            <Button
-              onClick={handleClearGrades}
-              variant="outline"
-              size="lg"
-              className="rounded-none"
-            >
-              Limpar valores
-            </Button>
-            <ExportGrades />
-            <ImportGradesButton />
-          </>
-        )}
-      </aside>
+	return (
+		<main className="flex py-8 container gap-16 flex-col md:flex-row">
+			<aside className="flex flex-col md:max-w-[30%]">
+				{Object.keys(subscribedSubjects).length > 0 && (
+					<>
+						<GradeSummary
+							subscribedSubjects={subscribedSubjects}
+							grades={grades}
+						/>
+						<Button
+							onClick={handleClearGrades}
+							variant="outline"
+							size="lg"
+							className="rounded-none"
+						>
+							Limpar valores
+						</Button>
+						<ExportGrades />
+						<ImportGradesButton />
+					</>
+				)}
+			</aside>
 
-      <ul className="flex flex-col flex-1 gap-2">
-        {Object.values(subscribedSubjects).map((subject) => (
-          <Fragment key={subject.code}>
-            <SubjectGradesInputCard
-              subject={subject}
-              grades={grades[subject.code] || {}}
-              onGradeChange={(examOrAssignment, grade) =>
-                handleGradeChange(subject.code, examOrAssignment, grade)
-              }
-            />
-            <Separator className="bg-muted" />
-          </Fragment>
-        ))}
+			<ul className="flex flex-col flex-1 gap-2">
+				{Object.values(subscribedSubjects).map((subject) => (
+					<Fragment key={subject.code}>
+						<SubjectGradesInputCard
+							subject={subject}
+							grades={grades[subject.code] || {}}
+							onGradeChange={(examOrAssignment, grade) =>
+								handleGradeChange(subject.code, examOrAssignment, grade)
+							}
+						/>
+						<Separator className="bg-muted" />
+					</Fragment>
+				))}
 
-        {isSubscribedSubjectsEmpty && (
-          <span className="text-center text-muted-foreground">
-            Você não tem nenhuma matéria inscrita ainda... Adicione matérias
-            para começar a adicionar notas!
-          </span>
-        )}
-      </ul>
-    </main>
-  );
+				{isSubscribedSubjectsEmpty && (
+					<span className="text-center text-muted-foreground">
+						Você não tem nenhuma matéria inscrita ainda... Adicione matérias
+						para começar a adicionar notas!
+					</span>
+				)}
+			</ul>
+		</main>
+	);
 }
