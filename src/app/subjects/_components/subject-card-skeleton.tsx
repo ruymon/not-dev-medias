@@ -1,30 +1,21 @@
-import { Card, CardFooter, CardHeader } from "@/components/ui/card";
+import { Card, CardAction, CardFooter, CardHeader } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
-import { getRandomWidthPercentage } from "@/lib/utils";
 
+// Varies its title width by position, so render it inside a `group` element.
 export function SubjectCardSkeleton() {
-  const titleWidth = getRandomWidthPercentage();
-
-  return (
-    <Card className="border-none py-5 flex flex-col gap-2 shadow-none">
-      <div className="flex justify-between gap-8">
-        <CardHeader className="space-y-1 p-0 flex-1">
-          <Skeleton className="h-4 w-20" />
-          <Skeleton
-            className="h-8"
-            style={{
-              width: titleWidth,
-            }}
-          />
-        </CardHeader>
-
-        <Skeleton className="h-9 w-24" />
-      </div>
-
-      <CardFooter className="justify-between px-0 pb-0 pt-2">
-        <Skeleton className="h-5 w-24 rounded-full" />
-        <Skeleton className="h-4 w-20" />
-      </CardFooter>
-    </Card>
-  );
+	return (
+		<Card size="sm">
+			<CardHeader>
+				<Skeleton className="h-4 w-16" />
+				<Skeleton className="h-5 w-3/4 group-nth-[3n+2]:w-1/2 group-nth-[3n]:w-2/3" />
+				<CardAction>
+					<Skeleton className="h-8 w-24" />
+				</CardAction>
+			</CardHeader>
+			<CardFooter className="justify-between">
+				<Skeleton className="h-5 w-24 rounded-full" />
+				<Skeleton className="h-8 w-28" />
+			</CardFooter>
+		</Card>
+	);
 }

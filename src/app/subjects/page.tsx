@@ -1,75 +1,96 @@
-import { Separator } from "@/components/ui/separator";
-import { Subject } from "@/types/subjects";
-import { Fragment } from "react";
+import type { Metadata } from "next";
+import { Suspense } from "react";
+import {
+	AVAILABLE_COURSES,
+	filterSubjects,
+	parseSubjectsFilter,
+} from "@/lib/subjects";
 import { SearchAndFilter } from "./_components/search-and-filter";
+import { SearchAndFilterSkeleton } from "./_components/search-and-filter-skeleton";
 import { SubjectCard } from "./_components/subject-card";
-import { SUBJECTS } from "@/data/subjects";
+import { SubjectCardSkeleton } from "./_components/subject-card-skeleton";
 
-interface SubjectsPageProps {
-  // Next.js 15+ resolves request data lazily, so `searchParams` is a promise.
-  searchParams: Promise<{ search?: string; courses?: string }>;
+export const metadata: Metadata = {
+	title: "Matérias",
+};
+
+export const instant = true;
+
+type SearchParams = PageProps<"/subjects">["searchParams"];
+
+// Not async: only the parts that read `searchParams` wait for the request, so
+// the header, sidebar and fallbacks all land in the static shell.
+export default function SubjectsPage({ searchParams }: PageProps<"/subjects">) {
+	return (
+		<>
+			<aside className="flex flex-col gap-8 md:max-w-80 md:flex-1 h-fit md:sticky md:top-[calc(4rem+2rem)] bg-background">
+				<header className="flex flex-col gap-1 md:py-0 pt-4">
+					<h1 className="text-primary font-bold text-4xl md:text-3xl">
+						Matérias{" "}
+						<span className="font-normal text-base text-muted-foreground">
+							(
+							<Suspense fallback="-">
+								<SubjectsCount searchParams={searchParams} />
+							</Suspense>
+							)
+						</span>
+					</h1>
+					<span className="text-accent-foreground">
+						Veja todas as matérias disponíveis
+					</span>
+				</header>
+
+				<Suspense fallback={<SearchAndFilterSkeleton />}>
+					<SearchAndFilter courses={AVAILABLE_COURSES} />
+				</Suspense>
+			</aside>
+
+			<ul className="flex flex-col flex-1 gap-3">
+				<Suspense fallback={<SubjectsListSkeleton />}>
+					<SubjectsList searchParams={searchParams} />
+				</Suspense>
+			</ul>
+		</>
+	);
 }
 
-export default async function SubjectsPage({
-  searchParams,
-}: SubjectsPageProps) {
-  const { search, courses } = await searchParams;
+async function SubjectsCount({ searchParams }: { searchParams: SearchParams }) {
+	const subjects = await filterSubjects(
+		parseSubjectsFilter(await searchParams),
+	);
+	return subjects.length;
+}
 
-  const subjectsArray = Object.values(SUBJECTS);
-  const selectedCourses = courses ? courses.split(",") : [];
-  const searchTerm = search?.toLowerCase();
+async function SubjectsList({ searchParams }: { searchParams: SearchParams }) {
+	const filter = parseSubjectsFilter(await searchParams);
+	const subjects = await filterSubjects(filter);
+	const searchTerm = filter.search?.toLowerCase();
 
-  const filteredSubjects = subjectsArray.filter((subject: Subject) => {
-    const matchesSearch =
-      !searchTerm ||
-      subject.name.toLowerCase().includes(searchTerm) ||
-      subject.code.toLowerCase().includes(searchTerm);
+	if (subjects.length === 0) {
+		return (
+			<li className="w-full py-4 flex-col flex items-center justify-center">
+				<h3 className="text-lg font-medium text-accent-foreground">
+					Eita... Algo deu errado.
+				</h3>
+				<span className="text-muted-foreground text-sm font-normal">
+					Nenhuma matéria encontrada com os filtros aplicados.
+				</span>
+			</li>
+		);
+	}
 
-    const matchesCourse =
-      selectedCourses.length === 0 || selectedCourses.includes(subject.course);
+	return subjects.map((subject) => (
+		<li key={subject.code}>
+			<SubjectCard subject={subject} searchTerm={searchTerm} />
+		</li>
+	));
+}
 
-    return matchesSearch && matchesCourse;
-  });
-
-  return (
-    <>
-      <aside className="flex flex-col gap-8 md:max-w-80 md:flex-1 h-fit md:sticky md:top-[calc(4rem+2rem)] bg-background">
-        <header className="flex flex-col gap-1 md:py-0 pt-4">
-          <h1 className="text-primary font-bold text-4xl md:text-3xl">
-            Matérias{" "}
-            <span className="font-normal text-base text-muted-foreground">
-              ({filteredSubjects.length})
-            </span>
-          </h1>
-          <span className="text-accent-foreground">
-            Veja todas as matérias disponíveis
-          </span>
-        </header>
-
-        <SearchAndFilter subjects={subjectsArray} />
-      </aside>
-
-      <ul className="flex flex-col flex-1 gap-2">
-        {filteredSubjects.map((subject: Subject) => {
-          return (
-            <Fragment key={subject.code}>
-              <SubjectCard {...subject} />
-              <Separator className="bg-muted" />
-            </Fragment>
-          );
-        })}
-
-        {filteredSubjects.length === 0 && (
-          <div className="w-full py-4 flex-col flex items-center justify-center">
-            <h3 className="text-lg font-medium text-accent-foreground">
-              Eita... Algo deu errado.
-            </h3>
-            <span className="text-muted-foreground text-sm font-normal">
-              Nenhuma matéria encontrada com os filtros aplicados.
-            </span>
-          </div>
-        )}
-      </ul>
-    </>
-  );
+function SubjectsListSkeleton() {
+	return Array.from({ length: 10 }).map((_, index) => (
+		// biome-ignore lint/suspicious/noArrayIndexKey: static placeholder list
+		<li key={index} className="group">
+			<SubjectCardSkeleton />
+		</li>
+	));
 }

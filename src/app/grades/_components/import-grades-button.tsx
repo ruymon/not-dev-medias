@@ -2,49 +2,34 @@
 
 import { Button } from "@/components/ui/button";
 import { useSubscribedSubjectsGradesStore } from "@/stores/subscribed-subjects-grades-store";
-import { useRef } from "react";
 
 export function ImportGradesButton() {
-  const { setGrades } = useSubscribedSubjectsGradesStore();
-  const fileInputRef = useRef<HTMLInputElement>(null);
+	const { setGrades } = useSubscribedSubjectsGradesStore();
 
-  const handleImportGrades = () => {
-    if (fileInputRef.current) {
-      fileInputRef.current.click();
-    }
-  };
+	const handleFileInput = async (
+		event: React.ChangeEvent<HTMLInputElement>,
+	) => {
+		const file = event.target.files?.[0];
+		if (!file) return;
 
-  const handleFileInput = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
+		setGrades(JSON.parse(await file.text()));
+	};
 
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        const content = e.target?.result as string;
-        const importedGrades = JSON.parse(content);
-        setGrades(importedGrades);
-      };
-      reader.readAsText(file);
-    }
-  };
-
-  return (
-    <>
-      <Button
-        onClick={handleImportGrades}
-        variant="outline"
-        className="rounded-t-none"
-        size="lg"
-      >
-        Importar notas
-      </Button>
-      <input
-        type="file"
-        ref={fileInputRef}
-        onChange={handleFileInput}
-        accept=".json"
-        className="hidden"
-      />
-    </>
-  );
+	return (
+		<Button
+			asChild
+			variant="outline"
+			className="cursor-pointer has-focus-visible:ring-[3px] has-focus-visible:ring-ring/50"
+		>
+			<label>
+				Importar notas
+				<input
+					type="file"
+					accept=".json"
+					onChange={handleFileInput}
+					className="sr-only"
+				/>
+			</label>
+		</Button>
+	);
 }
