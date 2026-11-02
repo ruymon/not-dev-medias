@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { SUBJECTS } from "@/data/subjects";
 import { useSubscribedSubjectsGradesStore } from "@/stores/subscribed-subjects-grades-store";
 import { useSubscribedSubjectsStore } from "@/stores/subscribed-subjects-store";
 import { ExportGrades } from "./export-grades";
@@ -15,7 +16,12 @@ function clamp(value: number, min: number, max: number) {
 }
 
 export function GradesBoard() {
-	const { subscribedSubjects } = useSubscribedSubjectsStore();
+	const subscribedCodes = useSubscribedSubjectsStore(
+		(state) => state.subscribedCodes,
+	);
+	const subscribedSubjects = subscribedCodes.flatMap(
+		(code) => SUBJECTS.find((subject) => subject.code === code) ?? [],
+	);
 	const { grades, setGrades } = useSubscribedSubjectsGradesStore();
 
 	const handleGradeChange = (
@@ -39,14 +45,11 @@ export function GradesBoard() {
 		setGrades({});
 	};
 
-	const isSubscribedSubjectsEmpty =
-		Object.keys(subscribedSubjects).length === 0;
-
 	return (
 		<main className="flex py-8 container gap-16 flex-col md:flex-row">
 			<aside className="md:max-w-[30%]">
-				{Object.keys(subscribedSubjects).length > 0 && (
-					<GradeSummary subscribedSubjects={subscribedSubjects} grades={grades}>
+				{subscribedSubjects.length > 0 && (
+					<GradeSummary subjects={subscribedSubjects} grades={grades}>
 						<Button onClick={handleClearGrades} variant="outline">
 							Limpar valores
 						</Button>
@@ -57,7 +60,7 @@ export function GradesBoard() {
 			</aside>
 
 			<ul className="flex flex-col flex-1 gap-3">
-				{Object.values(subscribedSubjects).map((subject) => (
+				{subscribedSubjects.map((subject) => (
 					<li key={subject.code}>
 						<SubjectGradesInputCard
 							subject={subject}
@@ -69,7 +72,7 @@ export function GradesBoard() {
 					</li>
 				))}
 
-				{isSubscribedSubjectsEmpty && (
+				{subscribedSubjects.length === 0 && (
 					<span className="text-center text-muted-foreground">
 						Você não tem nenhuma matéria inscrita ainda... Adicione matérias
 						para começar a adicionar notas!

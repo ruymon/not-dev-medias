@@ -1,0 +1,22 @@
+name: Catálogo de matérias
+
+on:
+  pull_request:
+    paths:
+      - "src/data/**"
+      - "scripts/check-data.ts"
+  push:
+    branches: [main]
+    paths:
+      - "src/data/**"
+      - "scripts/check-data.ts"
+
+jobs:
+  check:
+    name: Validar src/data/subjects.json
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install --frozen-lockfile
+      - run: bun run data:check

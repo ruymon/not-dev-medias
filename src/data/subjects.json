@@ -1,0 +1,7485 @@
+{
+	"$schema": "./subjects.schema.json",
+	"courses": {
+		"administracao": "Administração",
+		"ciencia-da-computacao": "Ciência da Computação",
+		"design": "Design",
+		"engenharia-de-alimentos": "Engenharia de Alimentos",
+		"engenharia-de-controle-e-automacao": "Engenharia de Controle e Automação",
+		"engenharia-de-computacao": "Engenharia de Computação",
+		"engenharia-eletrica-eletronica": "Engenharia Elétrica/Eletrônica",
+		"engenharia-eletronica": "Engenharia Eletrônica",
+		"engenharia-eletrica": "Engenharia Elétrica",
+		"engenharia-ciclo-basico": "Engenharia (Ciclo Básico)",
+		"engenharia-mecanica": "Engenharia Mecânica",
+		"engenharia-de-producao": "Engenharia de Produção",
+		"engenharia-quimica": "Engenharia Química",
+		"engenharia-civil": "Engenharia Civil",
+		"tronco-eletrica": "Tronco Elétrica",
+		"tronco-mecanica": "Tronco Mecânica",
+		"tronco-quimica": "Tronco Química",
+		"sistemas-de-informacao": "Sistemas de Informação",
+		"tronco-tecnologias-de-informacao": "Tronco Tecnologias de Informação",
+		"libras": "Libras"
+	},
+	"subjects": [
+		{
+			"code": "ADM112",
+			"name": "Cálculo Aplicado à Administração",
+			"course": "administracao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.1,
+					"T2": 0.3,
+					"T3": 0.6
+				}
+			}
+		},
+		{
+			"code": "ADM113",
+			"name": "Cálculo e Pesquisa Operacional",
+			"course": "administracao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.1,
+					"T2": 0.9
+				}
+			}
+		},
+		{
+			"code": "ADM114",
+			"name": "Inovação e Novas Abordagens em Administração",
+			"course": "administracao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.3333333333,
+					"T2": 0.6666666667
+				}
+			}
+		},
+		{
+			"code": "ADM124",
+			"name": "Teoria Geral dos Sistemas",
+			"course": "administracao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.6
+				}
+			}
+		},
+		{
+			"code": "ADM125",
+			"name": "Tecnologia da Informação",
+			"course": "administracao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 1
+				}
+			}
+		},
+		{
+			"code": "ADM126",
+			"name": "Tecnologia Aplicada Gestão",
+			"course": "administracao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 1
+				}
+			}
+		},
+		{
+			"code": "ADM130",
+			"name": "Teoria Geral da Administração",
+			"course": "administracao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.6
+				}
+			}
+		},
+		{
+			"code": "ADM131",
+			"name": "Teoria Geral das Organizações",
+			"course": "administracao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.2,
+					"T2": 0.2,
+					"T3": 0.6
+				}
+			}
+		},
+		{
+			"code": "ADM151",
+			"name": "Comunicação Empresarial",
+			"course": "administracao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.6,
+					"T2": 0.4
+				}
+			}
+		},
+		{
+			"code": "ADM250",
+			"name": "Contabilidade Geral",
+			"course": "administracao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.2,
+					"T2": 0.2,
+					"T3": 0.6
+				}
+			}
+		},
+		{
+			"code": "ADM311",
+			"name": "Estatística",
+			"course": "administracao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.6
+				}
+			}
+		},
+		{
+			"code": "ADM312",
+			"name": "Sem cadastro",
+			"course": "administracao",
+			"period": null
+		},
+		{
+			"code": "ADM321",
+			"name": "Planejamento da Produção",
+			"course": "administracao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.6
+				}
+			}
+		},
+		{
+			"code": "ADM331",
+			"name": "Economia",
+			"course": "administracao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.6
+				}
+			}
+		},
+		{
+			"code": "ADM336",
+			"name": "Relações Jurídicas Empresariais",
+			"course": "administracao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.6
+				}
+			}
+		},
+		{
+			"code": "ADM341",
+			"name": "Matemática Financeira",
+			"course": "administracao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.6
+				}
+			}
+		},
+		{
+			"code": "ADM346",
+			"name": "Sem cadastro",
+			"course": "administracao",
+			"period": null
+		},
+		{
+			"code": "ADM351",
+			"name": "Contabilidade Gerencial",
+			"course": "administracao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.2,
+					"T2": 0.2,
+					"T3": 0.6
+				}
+			}
+		},
+		{
+			"code": "ADM421",
+			"name": "Gestão da Produção",
+			"course": "administracao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.6
+				}
+			}
+		},
+		{
+			"code": "ADM430",
+			"name": "Sem cadastro",
+			"course": "administracao",
+			"period": null
+		},
+		{
+			"code": "ADM461",
+			"name": "Gestão de Pessoas",
+			"course": "administracao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.3333333333,
+					"T2": 0.6666666667
+				}
+			}
+		},
+		{
+			"code": "ADM510",
+			"name": "Gestão Financeira",
+			"course": "administracao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.2,
+					"T2": 0.2,
+					"T3": 0.6
+				}
+			}
+		},
+		{
+			"code": "ADM531",
+			"name": "Marketing",
+			"course": "administracao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.6,
+					"T2": 0.4
+				}
+			}
+		},
+		{
+			"code": "ADM532",
+			"name": "Planejamento de Marketing para Negócios",
+			"course": "administracao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.6,
+					"T2": 0.4
+				}
+			}
+		},
+		{
+			"code": "ADM533",
+			"name": "Marketing Avançado",
+			"course": "administracao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.6,
+					"T2": 0.4
+				}
+			}
+		},
+		{
+			"code": "ADM561",
+			"name": "Projeto de Pesquisa",
+			"course": "administracao",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.2,
+					"T2": 0.2,
+					"T3": 0.6
+				}
+			}
+		},
+		{
+			"code": "ADM611",
+			"name": "Projetos de Investimentos e Empreendedorismo",
+			"course": "administracao",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.6
+				}
+			}
+		},
+		{
+			"code": "ADM620",
+			"name": "Gestão de Materiais e Administração de Compras",
+			"course": "administracao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.6
+				}
+			}
+		},
+		{
+			"code": "ADM630",
+			"name": "Métodos Quantitativos",
+			"course": "administracao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.1,
+					"T2": 0.3,
+					"T3": 0.6
+				}
+			}
+		},
+		{
+			"code": "ADM720",
+			"name": "Simulação Empresarial-Jogos de Empresa",
+			"course": "administracao",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.2,
+					"T2": 0.2,
+					"T3": 0.4,
+					"T4": 0.2
+				}
+			}
+		},
+		{
+			"code": "ADM741",
+			"name": "Trabalho de Conclusão de Curso I",
+			"course": "administracao",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.3,
+					"T2": 0.4,
+					"T3": 0.3
+				}
+			}
+		},
+		{
+			"code": "ADM770",
+			"name": "Sociologia Política e Organizacional",
+			"course": "administracao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.6
+				}
+			}
+		},
+		{
+			"code": "ADM780",
+			"name": "Economia e Negócios Internacionais",
+			"course": "administracao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ADM810",
+			"name": "Gestão de Cadeia de Suprimentos",
+			"course": "administracao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 1
+				}
+			}
+		},
+		{
+			"code": "ADM820",
+			"name": "Comércio Exterior",
+			"course": "administracao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 1
+				}
+			}
+		},
+		{
+			"code": "ADM830",
+			"name": "Planejamento Estratégico e Sustentabilidade",
+			"course": "administracao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ADM841",
+			"name": "Trabalho de Conclusão de Curso II",
+			"course": "administracao",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.2,
+					"T2": 0.3,
+					"T3": 0.2,
+					"T4": 0.3
+				}
+			}
+		},
+		{
+			"code": "ADM913",
+			"name": "Como Analisar e Interpretar Demonst. Financeiras",
+			"course": "administracao",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.6,
+					"T2": 0.4
+				}
+			}
+		},
+		{
+			"code": "ADM923",
+			"name": "Mercado Financeiro e de Capitais",
+			"course": "administracao",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.1666666667,
+					"T2": 0.1666666667,
+					"T3": 0.1666666667,
+					"T4": 0.1666666667,
+					"T5": 0.1666666667,
+					"T6": 0.1666666667
+				}
+			}
+		},
+		{
+			"code": "ADM925",
+			"name": "Planejamento Tributário",
+			"course": "administracao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ADM928",
+			"name": "Gestão de Negócios Internacionais",
+			"course": "administracao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 1
+				}
+			}
+		},
+		{
+			"code": "ADM941",
+			"name": "Inteligência de Negócios",
+			"course": "administracao",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.6
+				}
+			}
+		},
+		{
+			"code": "ADM943",
+			"name": "Gestão da Controladoria",
+			"course": "administracao",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.6,
+					"T2": 0.4
+				}
+			}
+		},
+		{
+			"code": "CIC201",
+			"name": "Cálculo para Ciência da Computação",
+			"course": "ciencia-da-computacao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "CIC202",
+			"name": "Física e Modelagem Computacional",
+			"course": "ciencia-da-computacao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 1
+				}
+			}
+		},
+		{
+			"code": "CIC203",
+			"name": "Algoritmos, Estrutura de Dados e Programação",
+			"course": "ciencia-da-computacao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.4,
+					"T3": 0.2
+				}
+			}
+		},
+		{
+			"code": "CIC204",
+			"name": "Proj Integr Interdisciplinar-Ciência da Computação",
+			"course": "ciencia-da-computacao",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.1,
+					"T2": 0.2,
+					"T3": 0.3,
+					"T4": 0.4
+				}
+			}
+		},
+		{
+			"code": "CIC205",
+			"name": "Álgebra Linear e Geometria Analítica",
+			"course": "ciencia-da-computacao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 1
+				}
+			}
+		},
+		{
+			"code": "CIC206",
+			"name": "Teoria da Comput., Autômatos e Linguagens Formais",
+			"course": "ciencia-da-computacao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "CIC301",
+			"name": "Ainda não existe",
+			"course": "ciencia-da-computacao",
+			"period": null
+		},
+		{
+			"code": "CIC302",
+			"name": "Ainda não existe",
+			"course": "ciencia-da-computacao",
+			"period": null
+		},
+		{
+			"code": "CIC303",
+			"name": "Ainda não existe",
+			"course": "ciencia-da-computacao",
+			"period": null
+		},
+		{
+			"code": "CIC304",
+			"name": "Ainda não existe",
+			"course": "ciencia-da-computacao",
+			"period": null
+		},
+		{
+			"code": "CIC305",
+			"name": "Ainda não existe",
+			"course": "ciencia-da-computacao",
+			"period": null
+		},
+		{
+			"code": "CIC306",
+			"name": "Ainda não existe",
+			"course": "ciencia-da-computacao",
+			"period": null
+		},
+		{
+			"code": "CIC307",
+			"name": "Ainda não existe",
+			"course": "ciencia-da-computacao",
+			"period": null
+		},
+		{
+			"code": "CIC308",
+			"name": "Ainda não existe",
+			"course": "ciencia-da-computacao",
+			"period": null
+		},
+		{
+			"code": "CIC401",
+			"name": "Ainda não existe",
+			"course": "ciencia-da-computacao",
+			"period": null
+		},
+		{
+			"code": "CIC402",
+			"name": "Ainda não existe",
+			"course": "ciencia-da-computacao",
+			"period": null
+		},
+		{
+			"code": "CIC403",
+			"name": "Ainda não existe",
+			"course": "ciencia-da-computacao",
+			"period": null
+		},
+		{
+			"code": "CIC404",
+			"name": "Ainda não existe",
+			"course": "ciencia-da-computacao",
+			"period": null
+		},
+		{
+			"code": "CIC405",
+			"name": "Ainda não existe",
+			"course": "ciencia-da-computacao",
+			"period": null
+		},
+		{
+			"code": "CIC406",
+			"name": "Ainda não existe",
+			"course": "ciencia-da-computacao",
+			"period": null
+		},
+		{
+			"code": "CIC407",
+			"name": "Ainda não existe",
+			"course": "ciencia-da-computacao",
+			"period": null
+		},
+		{
+			"code": "CIC408",
+			"name": "Ainda não existe",
+			"course": "ciencia-da-computacao",
+			"period": null
+		},
+		{
+			"code": "CIC901",
+			"name": "Ainda não existe",
+			"course": "ciencia-da-computacao",
+			"period": null
+		},
+		{
+			"code": "CIC902",
+			"name": "Ainda não existe",
+			"course": "ciencia-da-computacao",
+			"period": null
+		},
+		{
+			"code": "CIC903",
+			"name": "Ainda não existe",
+			"course": "ciencia-da-computacao",
+			"period": null
+		},
+		{
+			"code": "CIC904",
+			"name": "Ainda não existe",
+			"course": "ciencia-da-computacao",
+			"period": null
+		},
+		{
+			"code": "DSG141",
+			"name": "Desenho Técnico",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.4,
+					"T3": 0.2
+				}
+			}
+		},
+		{
+			"code": "DSG142",
+			"name": "Design e Conhecimento",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.4,
+					"T3": 0.2
+				}
+			}
+		},
+		{
+			"code": "DSG143",
+			"name": "Desenho",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.4,
+					"T3": 0.2
+				}
+			}
+		},
+		{
+			"code": "DSG144",
+			"name": "Fundamentos de Design",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.4,
+					"T3": 0.2
+				}
+			}
+		},
+		{
+			"code": "DSG145",
+			"name": "Edição de Imagens Digitais",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.4,
+					"T3": 0.2
+				}
+			}
+		},
+		{
+			"code": "DSG146",
+			"name": "Criação Bidimensional",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.2857142857,
+					"T2": 0.2857142857,
+					"T3": 0.4285714286
+				}
+			}
+		},
+		{
+			"code": "DSG147",
+			"name": "Design e Cultura",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.4,
+					"T3": 0.2
+				}
+			}
+		},
+		{
+			"code": "DSG148",
+			"name": "Sketch",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.4,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.6,
+				"items": {
+					"T1": 0.4285714286,
+					"T2": 0.4285714286,
+					"T3": 0.1428571429
+				}
+			}
+		},
+		{
+			"code": "DSG149",
+			"name": "Design Thinking",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.3333333333,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.6666666667,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.4,
+					"T3": 0.2
+				}
+			}
+		},
+		{
+			"code": "DSG150",
+			"name": "Edição de Imagens Vetoriais",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.4,
+					"T3": 0.2
+				}
+			}
+		},
+		{
+			"code": "DSG151",
+			"name": "Ciências Aplicadas",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.1,
+					"T2": 0.1,
+					"T3": 0.1,
+					"T4": 0.1,
+					"T5": 0.1,
+					"T6": 0.1,
+					"T7": 0.2,
+					"T8": 0.2
+				}
+			}
+		},
+		{
+			"code": "DSG152",
+			"name": "Criação Tridimensional",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.4,
+					"T3": 0.2
+				}
+			}
+		},
+		{
+			"code": "DSG233",
+			"name": "Design e História",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.4,
+					"T3": 0.2
+				}
+			}
+		},
+		{
+			"code": "DSG234",
+			"name": "Ilustração",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.4,
+					"T3": 0.2
+				}
+			}
+		},
+		{
+			"code": "DSG235",
+			"name": "Design Emocional",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.4,
+					"T3": 0.2
+				}
+			}
+		},
+		{
+			"code": "DSG236",
+			"name": "Modelagem 3D Paramétrica",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.1428571429,
+					"T2": 0.2857142857,
+					"T3": 0.1428571429,
+					"T4": 0.2857142857,
+					"T5": 0.1428571429
+				}
+			}
+		},
+		{
+			"code": "DSG237",
+			"name": "Sistemas Elétricos e Mecânicos",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.2,
+					"T2": 0.1,
+					"T3": 0.2,
+					"T4": 0.1,
+					"T5": 0.2,
+					"T6": 0.2
+				}
+			}
+		},
+		{
+			"code": "DSG238",
+			"name": "Marketing",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.4,
+					"T3": 0.2
+				}
+			}
+		},
+		{
+			"code": "DSG239",
+			"name": "Design e Sociedade",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.4,
+					"T3": 0.2
+				}
+			}
+		},
+		{
+			"code": "DSG240",
+			"name": "Ilustração Digital",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.4,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.6,
+				"items": {
+					"T1": 0.4285714286,
+					"T2": 0.4285714286,
+					"T3": 0.1428571429
+				}
+			}
+		},
+		{
+			"code": "DSG241",
+			"name": "Metadesign",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.3333333333,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.6666666667,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.4,
+					"T3": 0.2
+				}
+			}
+		},
+		{
+			"code": "DSG242",
+			"name": "Modelagem 3D em Superfícies",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.1428571429,
+					"T2": 0.2857142857,
+					"T3": 0.1428571429,
+					"T4": 0.2857142857,
+					"T5": 0.1428571429
+				}
+			}
+		},
+		{
+			"code": "DSG243",
+			"name": "Materiais Poliméricos",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.2,
+					"T2": 0.2,
+					"T3": 0.3,
+					"T4": 0.3
+				}
+			}
+		},
+		{
+			"code": "DSG244",
+			"name": "Estudos e Pesquisas Mercadológicas",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.4,
+					"T3": 0.2
+				}
+			}
+		},
+		{
+			"code": "DSG330",
+			"name": "Cool Hunting",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.3333333333,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.6666666667,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.4,
+					"T3": 0.2
+				}
+			}
+		},
+		{
+			"code": "DSG334",
+			"name": "Design de Superfície",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.4,
+					"T3": 0.2
+				}
+			}
+		},
+		{
+			"code": "DSG335",
+			"name": "Metodologia de Pesquisa I",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.2,
+					"T2": 0.1,
+					"T3": 0.1,
+					"T4": 0.4,
+					"T5": 0.2
+				}
+			}
+		},
+		{
+			"code": "DSG339",
+			"name": "Branding",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.4,
+					"T3": 0.2
+				}
+			}
+		},
+		{
+			"code": "DSG340",
+			"name": "Design Gráfico",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.4,
+					"T3": 0.2
+				}
+			}
+		},
+		{
+			"code": "DSG341",
+			"name": "Ergonomia Física",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.4,
+					"T3": 0.2
+				}
+			}
+		},
+		{
+			"code": "DSG342",
+			"name": "Design Sistêmico",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.4,
+					"T3": 0.2
+				}
+			}
+		},
+		{
+			"code": "DSG343",
+			"name": "Modelagem Digital",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.4,
+					"T3": 0.2
+				}
+			}
+		},
+		{
+			"code": "DSG344",
+			"name": "Materiais Metálicos",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.1,
+					"T2": 0.2,
+					"T3": 0.3,
+					"T4": 0.4
+				}
+			}
+		},
+		{
+			"code": "DSG345",
+			"name": "Ergonomia Cognitiva",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.3,
+					"T2": 0.3,
+					"T3": 0.2,
+					"T4": 0.2
+				}
+			}
+		},
+		{
+			"code": "DSG346",
+			"name": "Design Studio",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.4,
+					"T3": 0.2
+				}
+			}
+		},
+		{
+			"code": "DSG347",
+			"name": "Modelagem 3D Poligonal",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.4,
+					"T3": 0.2
+				}
+			}
+		},
+		{
+			"code": "DSG348",
+			"name": "Materiais Compósitos",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.2,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.8,
+				"items": {
+					"T1": 0.2,
+					"T2": 0.2,
+					"T3": 0.2,
+					"T4": 0.4
+				}
+			}
+		},
+		{
+			"code": "DSG421",
+			"name": "Metodologia da Pesquisa II",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.4,
+					"T3": 0.2
+				}
+			}
+		},
+		{
+			"code": "DSG422",
+			"name": "Trabalho de Conclusão de Curso I",
+			"course": "design",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.2,
+					"T2": 0.2,
+					"T3": 0.3,
+					"T4": 0.3
+				}
+			}
+		},
+		{
+			"code": "DSG425",
+			"name": "Metodologia de Pesquisa III",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.4,
+					"T3": 0.2
+				}
+			}
+		},
+		{
+			"code": "DSG426",
+			"name": "Trabalho de Conclusão de Curso II",
+			"course": "design",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.1,
+					"T2": 0.1,
+					"T3": 0.2,
+					"T4": 0.2,
+					"T5": 0.3,
+					"T6": 0.1
+				}
+			}
+		},
+		{
+			"code": "DSG429",
+			"name": "Tópicos Avançados em Design",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.4,
+					"T3": 0.2
+				}
+			}
+		},
+		{
+			"code": "DSG430",
+			"name": "Projeto de Produtos",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.8,
+					"T2": 0.2
+				}
+			}
+		},
+		{
+			"code": "DSG432",
+			"name": "Gerenciamento de Projeto",
+			"course": "design",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.6
+				}
+			}
+		},
+		{
+			"code": "DSG433",
+			"name": "Modelos e Ambientes Virtuais",
+			"course": "design",
+			"period": null
+		},
+		{
+			"code": "DSG434",
+			"name": "Modelos e Protótipos",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.1666666667,
+					"T2": 0.3333333333,
+					"T3": 0.3333333333,
+					"T4": 0.1666666667
+				}
+			}
+		},
+		{
+			"code": "DSG435",
+			"name": "Prototipação",
+			"course": "design",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.15,
+					"T2": 0.35,
+					"T3": 0.15,
+					"T4": 0.35
+				}
+			}
+		},
+		{
+			"code": "DSG436",
+			"name": "Design de Negócio",
+			"course": "design",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "DSG904",
+			"name": "Produção Audio Visual",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.4,
+					"T3": 0.2
+				}
+			}
+		},
+		{
+			"code": "DSG907",
+			"name": "Animação de Rendering Digital",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.3333333333,
+					"T2": 0.3333333333,
+					"T3": 0.3333333333
+				}
+			}
+		},
+		{
+			"code": "DSG911",
+			"name": "Prototipagem de Conceitos",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.4,
+					"T3": 0.2
+				}
+			}
+		},
+		{
+			"code": "DSG915",
+			"name": "Neurodesign",
+			"course": "design",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.3333333333,
+					"T2": 0.6666666667
+				}
+			}
+		},
+		{
+			"code": "DSG916",
+			"name": "After Effects",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.4,
+					"T3": 0.2
+				}
+			}
+		},
+		{
+			"code": "DSG918",
+			"name": "Processos Criativos Colaborativos",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.4,
+					"T3": 0.2
+				}
+			}
+		},
+		{
+			"code": "DSG919",
+			"name": "Análise Multissensorial do Design",
+			"course": "design",
+			"period": "semester",
+			"exams": {
+				"weight": 0.3333333333,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.6666666667,
+				"items": {
+					"T1": 0.3333333333,
+					"T2": 0.6666666667
+				}
+			}
+		},
+		{
+			"code": "EAL103",
+			"name": "Físico-Química dos Alimentos",
+			"course": "engenharia-de-alimentos",
+			"period": "annual",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EAL302",
+			"name": "Laboratório de Engenharia de Alimentos I",
+			"course": "engenharia-de-alimentos",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "EAL303",
+			"name": "Fundamentos de Engenharia de Alimentos",
+			"course": "engenharia-de-alimentos",
+			"period": "annual",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.3,
+					"T2": 0.3,
+					"T3": 0.4
+				}
+			}
+		},
+		{
+			"code": "EAL304",
+			"name": "Química e Bioquímica de Alimentos",
+			"course": "engenharia-de-alimentos",
+			"period": "annual",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "EAL305",
+			"name": "Microbiologia de Alimentos",
+			"course": "engenharia-de-alimentos",
+			"period": "annual",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "EAL403",
+			"name": "Laboratório de Engenharia de Alimentos II",
+			"course": "engenharia-de-alimentos",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "EAL404",
+			"name": "Tecnologia de Alimentos",
+			"course": "engenharia-de-alimentos",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.2,
+					"T2": 0.2,
+					"T3": 0.2,
+					"T4": 0.2,
+					"T5": 0.2
+				}
+			}
+		},
+		{
+			"code": "EAL405",
+			"name": "Instrumentação, Controle e Automação",
+			"course": "engenharia-de-alimentos",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 1
+				}
+			}
+		},
+		{
+			"code": "EAL406",
+			"name": "Análise Sensorial e Vida de Prateleira",
+			"course": "engenharia-de-alimentos",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EAL507",
+			"name": "Operações Unitárias da Indústria de Alimentos",
+			"course": "engenharia-de-alimentos",
+			"period": "annual",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "EAL508",
+			"name": "Materiais para Alimentos",
+			"course": "engenharia-de-alimentos",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EAL509",
+			"name": "Embalagens para Alimentos",
+			"course": "engenharia-de-alimentos",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.3,
+					"T2": 0.7
+				}
+			}
+		},
+		{
+			"code": "EAL511",
+			"name": "Segurança de Alimentos",
+			"course": "engenharia-de-alimentos",
+			"period": "annual",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "EAL938",
+			"name": "Food Design",
+			"course": "engenharia-de-alimentos",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "EAL942",
+			"name": "Rotulagem Nutricional",
+			"course": "engenharia-de-alimentos",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.1666666667,
+					"T2": 0.1666666667,
+					"T3": 0.1666666667,
+					"T4": 0.1666666667,
+					"T5": 0.3333333333
+				}
+			}
+		},
+		{
+			"code": "ECA106",
+			"name": "Projetos e Elementos de Máquinas",
+			"course": "engenharia-de-controle-e-automacao",
+			"period": "annual",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ECA221",
+			"name": "Acionamentos e Instalações Elétricas Industriais",
+			"course": "engenharia-de-controle-e-automacao",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ECA304",
+			"name": "Programação Orientada a Objetos e Banco de Dados",
+			"course": "engenharia-de-controle-e-automacao",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.5
+				}
+			}
+		},
+		{
+			"code": "ECA401",
+			"name": "Modelagem e Análise de Sistemas Dinâmicos",
+			"course": "engenharia-de-controle-e-automacao",
+			"period": "annual",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ECA407",
+			"name": "Instrumentação",
+			"course": "engenharia-de-controle-e-automacao",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ECA408",
+			"name": "Automação e Sistemas Industriais",
+			"course": "engenharia-de-controle-e-automacao",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ECA409",
+			"name": "Microcontroladores e Sistemas Microcontrolados",
+			"course": "engenharia-de-controle-e-automacao",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.6
+				}
+			}
+		},
+		{
+			"code": "ECA410",
+			"name": "Hidráulica e Pneumática",
+			"course": "engenharia-de-controle-e-automacao",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "ECA414",
+			"name": "Sistemas de Controle I",
+			"course": "engenharia-de-controle-e-automacao",
+			"period": "annual",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "ECA415",
+			"name": "Processos de Fabricação e Lab. de Manufatura",
+			"course": "engenharia-de-controle-e-automacao",
+			"period": "annual",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "ECA416",
+			"name": "Sistemas de Controle II",
+			"course": "engenharia-de-controle-e-automacao",
+			"period": "annual",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ECA510",
+			"name": "Automação e Controle de Processos Industriais",
+			"course": "engenharia-de-controle-e-automacao",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ECA513",
+			"name": "Projeto de Máquinas e Mecanismos",
+			"course": "engenharia-de-controle-e-automacao",
+			"period": "annual",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ECA514",
+			"name": "Engenharia Assistida por Computador - CAE",
+			"course": "engenharia-de-controle-e-automacao",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ECA515",
+			"name": "Robótica Industrial",
+			"course": "engenharia-de-controle-e-automacao",
+			"period": "annual",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ECA603",
+			"name": "Ciências Térmicas",
+			"course": "engenharia-de-controle-e-automacao",
+			"period": "annual",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.3,
+					"T2": 0.3,
+					"T3": 0.2,
+					"T4": 0.2
+				}
+			}
+		},
+		{
+			"code": "ECA703",
+			"name": "Trabalho de Conclusão de Curso",
+			"course": "engenharia-de-controle-e-automacao",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.05,
+					"T2": 0.05,
+					"T3": 0.1,
+					"T4": 0.1,
+					"T5": 0.2,
+					"T6": 0.5
+				}
+			}
+		},
+		{
+			"code": "ECA817",
+			"name": "Fundamentos de Aprendizagem de Máquina",
+			"course": "engenharia-de-controle-e-automacao",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ECA818",
+			"name": "Inteligência Artificial Aplic à Rob e Visão Comput",
+			"course": "engenharia-de-controle-e-automacao",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ECA819",
+			"name": "Robôs Móveis Autônomos",
+			"course": "engenharia-de-controle-e-automacao",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ECA820",
+			"name": "Robótica em Ambientes Virtuais",
+			"course": "engenharia-de-controle-e-automacao",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ECM225",
+			"name": "Sistemas Operacionais",
+			"course": "engenharia-de-computacao",
+			"period": "annual",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.25,
+					"P2": 0.25,
+					"P3": 0.25,
+					"P4": 0.25
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ECM231",
+			"name": "Engenharia de Software",
+			"course": "engenharia-de-computacao",
+			"period": null
+		},
+		{
+			"code": "ECM245",
+			"name": "Arquitetura e Organização de Computadores",
+			"course": "engenharia-de-computacao",
+			"period": "annual",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ECM251",
+			"name": "Linguagens de Programação I",
+			"course": "engenharia-de-computacao",
+			"period": "annual",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.25,
+					"P2": 0.25,
+					"P3": 0.25,
+					"P4": 0.25
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ECM252",
+			"name": "Linguagens de Programação II",
+			"course": "engenharia-de-computacao",
+			"period": "annual",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ECM253",
+			"name": "Linguagens Formais, Autômatos e Compiladores",
+			"course": "engenharia-de-computacao",
+			"period": "annual",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.25,
+					"P2": 0.25,
+					"P3": 0.25,
+					"P4": 0.25
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ECM303",
+			"name": "Sistemas de Controle",
+			"course": "engenharia-de-computacao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 1
+				}
+			}
+		},
+		{
+			"code": "ECM304",
+			"name": "Circuitos Elétricos",
+			"course": "engenharia-de-computacao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ECM305",
+			"name": "Sistemas Eletrônicos",
+			"course": "engenharia-de-computacao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ECM306",
+			"name": "Tópicos Avançados em Estruturas de Dados",
+			"course": "engenharia-de-computacao",
+			"period": "annual",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.25,
+					"P2": 0.25,
+					"P3": 0.25,
+					"P4": 0.25
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ECM307",
+			"name": "Sistemas e Sinais",
+			"course": "engenharia-de-computacao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 1
+				}
+			}
+		},
+		{
+			"code": "ECM401",
+			"name": "Banco de Dados",
+			"course": "engenharia-de-computacao",
+			"period": "annual",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ECM404",
+			"name": "Estrutura de Dados e Técnicas de Programação",
+			"course": "engenharia-de-computacao",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "ECM407",
+			"name": "Redes de Computadores",
+			"course": "engenharia-de-computacao",
+			"period": "annual",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "ECM502",
+			"name": "Inteligência Artificial",
+			"course": "engenharia-de-computacao",
+			"period": "annual",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ECM514",
+			"name": "Ciência dos Dados",
+			"course": "engenharia-de-computacao",
+			"period": "annual",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ECM515",
+			"name": "Segurança da Informação",
+			"course": "engenharia-de-computacao",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "ECM516",
+			"name": "Arquitetura de Sistemas Computacionais",
+			"course": "engenharia-de-computacao",
+			"period": "annual",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ECM517",
+			"name": "Infraestrutura de TI e Computação em Nuvem",
+			"course": "engenharia-de-computacao",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "ECM800",
+			"name": "Trabalho de Conclusão de Curso",
+			"course": "engenharia-de-computacao",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.1111111111,
+					"T2": 0.2222222222,
+					"T3": 0.1666666667,
+					"T4": 0.1666666667,
+					"T5": 0.3333333333
+				}
+			}
+		},
+		{
+			"code": "ECM963",
+			"name": "Desenvolvimento de Aplicativos Híbridos",
+			"course": "engenharia-de-computacao",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ECM967",
+			"name": "Tópicos Avançados em Back-End",
+			"course": "engenharia-de-computacao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ECM969",
+			"name": "Programação Funcional",
+			"course": "engenharia-de-computacao",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ECM971",
+			"name": "Devops: Metodologia de Desenvolvimento de Software",
+			"course": "engenharia-de-computacao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ECM973",
+			"name": "Algorítmos de Visão Comp.com Inteligência Artif.",
+			"course": "engenharia-de-computacao",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ECM978",
+			"name": "Banco de Dados não Convencionais",
+			"course": "engenharia-de-computacao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EEE281",
+			"name": "Instalações Elétricas",
+			"course": "engenharia-eletrica-eletronica",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "EEE314",
+			"name": "Trabalho de Conclusão de Curso",
+			"course": "engenharia-eletrica-eletronica",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.1111111111,
+					"T2": 0.2222222222,
+					"T3": 0.1666666667,
+					"T4": 0.1666666667,
+					"T5": 0.3333333333
+				}
+			}
+		},
+		{
+			"code": "EEE401",
+			"name": "Eletrônica de Potência e Acionamentos",
+			"course": "engenharia-eletrica-eletronica",
+			"period": "semester",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EEE402",
+			"name": "Conversão de Energia",
+			"course": "engenharia-eletrica-eletronica",
+			"period": "semester",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.1666666667,
+					"T2": 0.1666666667,
+					"T3": 0.1666666667,
+					"T4": 0.1666666667,
+					"T5": 0.1666666667,
+					"T6": 0.1666666667
+				}
+			}
+		},
+		{
+			"code": "EEN211",
+			"name": "Eletromagnetismo II",
+			"course": "engenharia-eletronica",
+			"period": "annual",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "EEN212",
+			"name": "Instrumentação e Automação",
+			"course": "engenharia-eletronica",
+			"period": "annual",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "EEN222",
+			"name": "Telecomunicações",
+			"course": "engenharia-eletronica",
+			"period": "annual",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "EEN251",
+			"name": "Microcontroladores e Sistemas Embarcados",
+			"course": "engenharia-eletronica",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.3,
+					"T3": 0.3
+				}
+			}
+		},
+		{
+			"code": "EEN502",
+			"name": "Sistemas de Controle II",
+			"course": "engenharia-eletronica",
+			"period": null
+		},
+		{
+			"code": "EEN504",
+			"name": "Internet das Coisas e Sistemas de Tempo Real",
+			"course": "engenharia-eletronica",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EEN905",
+			"name": "Programação Orientada a Objetos com Java",
+			"course": "engenharia-eletronica",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EEN924",
+			"name": "Tópicos em Engenharia Biomédica",
+			"course": "engenharia-eletronica",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 1
+				}
+			}
+		},
+		{
+			"code": "EEN925",
+			"name": "Tópicos em Engenharia de Áudio I",
+			"course": "engenharia-eletronica",
+			"period": null
+		},
+		{
+			"code": "EEN932",
+			"name": "Novas Tecnologias em Mídia",
+			"course": "engenharia-eletronica",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 1
+				}
+			}
+		},
+		{
+			"code": "EEN933",
+			"name": "Tecnologia 5G e Aplicações",
+			"course": "engenharia-eletronica",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EEN941",
+			"name": "Técnicas de Engenharia para Altas Frequências I",
+			"course": "engenharia-eletronica",
+			"period": "semester",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EEN942",
+			"name": "Técnicas de Engenharia para Altas Frequências II",
+			"course": "engenharia-eletronica",
+			"period": null
+		},
+		{
+			"code": "EEN962",
+			"name": "Redes Neurais Artificiais",
+			"course": "engenharia-eletronica",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "EET262",
+			"name": "Sistemas de Potência",
+			"course": "engenharia-eletrica",
+			"period": "annual",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "EET273",
+			"name": "Geração e Transmissão de Energia",
+			"course": "engenharia-eletrica",
+			"period": "semester",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EET275",
+			"name": "Distribuição, Regulação e Qualidade da Energia",
+			"course": "engenharia-eletrica",
+			"period": "semester",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EET356",
+			"name": "Instalações Industriais e Automação",
+			"course": "engenharia-eletrica",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "EET357",
+			"name": "Máquinas Elétricas",
+			"course": "engenharia-eletrica",
+			"period": "annual",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.05,
+					"T2": 0.05,
+					"T3": 0.05,
+					"T4": 0.05,
+					"T5": 0.05,
+					"T6": 0.05,
+					"T7": 0.05,
+					"T8": 0.05,
+					"T9": 0.05,
+					"T10": 0.05,
+					"T11": 0.05,
+					"T12": 0.05,
+					"T13": 0.1,
+					"T14": 0.1,
+					"T15": 0.1,
+					"T16": 0.1
+				}
+			}
+		},
+		{
+			"code": "EET501",
+			"name": "Sistemas de Proteção",
+			"course": "engenharia-eletrica",
+			"period": "annual",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "EET913",
+			"name": "Subestações Elétricas",
+			"course": "engenharia-eletrica",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EET949",
+			"name": "Dinâmica de Sistemas Elétricos",
+			"course": "engenharia-eletrica",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EET954",
+			"name": "Smart Grid e Novas Tendências",
+			"course": "engenharia-eletrica",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.6
+				}
+			}
+		},
+		{
+			"code": "EET955",
+			"name": "Projetos de Usinas e Substações",
+			"course": "engenharia-eletrica",
+			"period": null
+		},
+		{
+			"code": "EET956",
+			"name": "Transitórios Eletromagnéticos",
+			"course": "engenharia-eletrica",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "EET958",
+			"name": "Energias Alternativas e Sustentabilidade",
+			"course": "engenharia-eletrica",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EET959",
+			"name": "Mercado de Energia",
+			"course": "engenharia-eletrica",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EET960",
+			"name": "Cogeração de Energia nos Setores Indu e Comercial",
+			"course": "engenharia-eletrica",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.1666666667,
+					"T2": 0.3333333333,
+					"T3": 0.5
+				}
+			}
+		},
+		{
+			"code": "EET961",
+			"name": "Energ Conv e Alternativas:Conversão e Eficiência",
+			"course": "engenharia-eletrica",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EET962",
+			"name": "Smart Grid - Redes Inteligentes",
+			"course": "engenharia-eletrica",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.6
+				}
+			}
+		},
+		{
+			"code": "EET963",
+			"name": "Distribuição, Regulação e Qualidade de Energia",
+			"course": "engenharia-eletrica",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.3333333333,
+					"T2": 0.6666666667
+				}
+			}
+		},
+		{
+			"code": "EFB105",
+			"name": "Cálculo Diferencial e Integral I",
+			"course": "engenharia-ciclo-basico",
+			"period": "annual",
+			"exams": {
+				"weight": 0.8,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.2,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "EFB108",
+			"name": "Matemática Computacional",
+			"course": "engenharia-ciclo-basico",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.6
+				}
+			}
+		},
+		{
+			"code": "EFB109",
+			"name": "Cálculo Diferencial e Integral II",
+			"course": "engenharia-ciclo-basico",
+			"period": "annual",
+			"exams": {
+				"weight": 0.8,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.2,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EFB110",
+			"name": "Vetores, Curvas e Superfícies",
+			"course": "engenharia-ciclo-basico",
+			"period": "annual",
+			"exams": {
+				"weight": 0.8,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.2,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "EFB111",
+			"name": "Cálculo Diferencial e Integral I",
+			"course": "engenharia-ciclo-basico",
+			"period": "semester",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EFB204",
+			"name": "Mecânica Geral",
+			"course": "engenharia-ciclo-basico",
+			"period": "annual",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EFB206",
+			"name": "Física II",
+			"course": "engenharia-ciclo-basico",
+			"period": "annual",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EFB207",
+			"name": "Física I",
+			"course": "engenharia-ciclo-basico",
+			"period": "annual",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "EFB208",
+			"name": "Física I",
+			"course": "engenharia-ciclo-basico",
+			"period": "semester",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EFB302",
+			"name": "Desenho",
+			"course": "engenharia-ciclo-basico",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "EFB303",
+			"name": "Desenho",
+			"course": "engenharia-ciclo-basico",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "EFB403",
+			"name": "Algoritmos e Programação",
+			"course": "engenharia-ciclo-basico",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.15,
+					"T2": 0.15,
+					"T3": 0.15,
+					"T4": 0.15,
+					"T5": 0.15,
+					"T6": 0.15,
+					"T7": 0.1
+				}
+			}
+		},
+		{
+			"code": "EFB404",
+			"name": "Algoritmos e Programação",
+			"course": "engenharia-ciclo-basico",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.2,
+					"T2": 0.2,
+					"T3": 0.25,
+					"T4": 0.25,
+					"T5": 0.1
+				}
+			}
+		},
+		{
+			"code": "EFB502",
+			"name": "Química Geral",
+			"course": "engenharia-ciclo-basico",
+			"period": "annual",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "EFB604",
+			"name": "Fundamentos de Engenharia",
+			"course": "engenharia-ciclo-basico",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.2,
+					"T2": 0.2,
+					"T3": 0.1,
+					"T4": 0.2,
+					"T5": 0.2,
+					"T6": 0.1
+				}
+			}
+		},
+		{
+			"code": "EFB803",
+			"name": "Estatística",
+			"course": "engenharia-ciclo-basico",
+			"period": "annual",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EFH113",
+			"name": "Empreendedorismo e Gestão",
+			"course": null,
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.2,
+					"T2": 0.2,
+					"T3": 0.3,
+					"T4": 0.3
+				}
+			}
+		},
+		{
+			"code": "EFH114",
+			"name": "Higiene e Segurança do Trabalho",
+			"course": null,
+			"period": "semester",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.125,
+					"T2": 0.125,
+					"T3": 0.125,
+					"T4": 0.125,
+					"T5": 0.125,
+					"T6": 0.125,
+					"T7": 0.125,
+					"T8": 0.125
+				}
+			}
+		},
+		{
+			"code": "EFH116",
+			"name": "Economia",
+			"course": null,
+			"period": "annual",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EFH117",
+			"name": "Direito Empresarial",
+			"course": null,
+			"period": "semester",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EFH118",
+			"name": "Higiene e Segurança do Trabalho",
+			"course": null,
+			"period": "semester",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.125,
+					"T2": 0.125,
+					"T3": 0.125,
+					"T4": 0.125,
+					"T5": 0.125,
+					"T6": 0.125,
+					"T7": 0.125,
+					"T8": 0.125
+				}
+			}
+		},
+		{
+			"code": "EMC103",
+			"name": "Mecânica das Estruturas",
+			"course": "engenharia-mecanica",
+			"period": "annual",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EMC208",
+			"name": "Manufatura Assistida por Computador",
+			"course": "engenharia-mecanica",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.3333333333,
+					"T2": 0.3333333333,
+					"T3": 0.3333333333
+				}
+			}
+		},
+		{
+			"code": "EMC211",
+			"name": "Processos de Fabricação I",
+			"course": "engenharia-mecanica",
+			"period": "semester",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EMC212",
+			"name": "Processos de Fabricação II",
+			"course": "engenharia-mecanica",
+			"period": "semester",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.3333333333,
+					"T2": 0.3333333333,
+					"T3": 0.3333333333
+				}
+			}
+		},
+		{
+			"code": "EMC213",
+			"name": "Materiais de Construção Mecânica I",
+			"course": "engenharia-mecanica",
+			"period": "annual",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "EMC214",
+			"name": "Materiais de Construção Mecânica II",
+			"course": "engenharia-mecanica",
+			"period": "annual",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EMC216",
+			"name": "Método dos Elementos Finitos",
+			"course": "engenharia-mecanica",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "EMC217",
+			"name": "Manufatura Assistida por Computador",
+			"course": "engenharia-mecanica",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EMC302",
+			"name": "Construção de Máquinas I",
+			"course": "engenharia-mecanica",
+			"period": "annual",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.3333333333,
+					"T2": 0.6666666667
+				}
+			}
+		},
+		{
+			"code": "EMC306",
+			"name": "Construção de Máquinas II",
+			"course": "engenharia-mecanica",
+			"period": "annual",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.3333333333,
+					"T2": 0.6666666667
+				}
+			}
+		},
+		{
+			"code": "EMC308",
+			"name": "Controle da Qualidade",
+			"course": "engenharia-mecanica",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EMC403",
+			"name": "Controle de Processos",
+			"course": "engenharia-mecanica",
+			"period": "annual",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EMC405",
+			"name": "Elétrica e Automação",
+			"course": "engenharia-mecanica",
+			"period": "semester",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 1
+				}
+			}
+		},
+		{
+			"code": "EMC406",
+			"name": "Eletricidade",
+			"course": "engenharia-mecanica",
+			"period": "semester",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 1
+				}
+			}
+		},
+		{
+			"code": "EMC505",
+			"name": "Propulsão Veicular",
+			"course": "engenharia-mecanica",
+			"period": "annual",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EMC506",
+			"name": "Mecânica Analítica",
+			"course": "engenharia-mecanica",
+			"period": "annual",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EMC507",
+			"name": "Mecânica Vibratória",
+			"course": "engenharia-mecanica",
+			"period": "annual",
+			"exams": {
+				"weight": 0.9,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.1,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EMC611",
+			"name": "Mecânica dos Fluidos I",
+			"course": "engenharia-mecanica",
+			"period": "annual",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "EMC612",
+			"name": "Mecânica dos Fluidos II",
+			"course": "engenharia-mecanica",
+			"period": "annual",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.0666666667,
+					"T2": 0.1333333333,
+					"T3": 0.2,
+					"T4": 0.1333333333,
+					"T5": 0.2666666667,
+					"T6": 0.2
+				}
+			}
+		},
+		{
+			"code": "EMC613",
+			"name": "Máquinas de Fluxo",
+			"course": "engenharia-mecanica",
+			"period": "annual",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.0909090909,
+					"T2": 0.0909090909,
+					"T3": 0.2727272727,
+					"T4": 0.1818181818,
+					"T5": 0.1818181818,
+					"T6": 0.1818181818
+				}
+			}
+		},
+		{
+			"code": "EMC615",
+			"name": "Transferência de Calor I",
+			"course": "engenharia-mecanica",
+			"period": "annual",
+			"exams": {
+				"weight": 0.8,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.2,
+				"items": {
+					"T1": 0.3333333333,
+					"T2": 0.3333333333,
+					"T3": 0.3333333333
+				}
+			}
+		},
+		{
+			"code": "EMC616",
+			"name": "Transferência de Calor II",
+			"course": "engenharia-mecanica",
+			"period": "annual",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.3333333333,
+					"T2": 0.3333333333,
+					"T3": 0.3333333333
+				}
+			}
+		},
+		{
+			"code": "EMC617",
+			"name": "Sistemas de Conversão de Energia I",
+			"course": "engenharia-mecanica",
+			"period": "annual",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.3,
+					"T2": 0.3,
+					"T3": 0.2,
+					"T4": 0.2
+				}
+			}
+		},
+		{
+			"code": "EMC618",
+			"name": "Sistemas de Conversão de Energia II",
+			"course": "engenharia-mecanica",
+			"period": "annual",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EMC815",
+			"name": "Dinâmica e Sistemas Veiculares",
+			"course": "engenharia-mecanica",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.6
+				}
+			}
+		},
+		{
+			"code": "EMC817",
+			"name": "Introdução à Análise de Falhas",
+			"course": "engenharia-mecanica",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.2,
+					"T2": 0.2,
+					"T3": 0.2,
+					"T4": 0.4
+				}
+			}
+		},
+		{
+			"code": "EMC819",
+			"name": "Projeto Básico de Aeronaves",
+			"course": "engenharia-mecanica",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.3,
+					"T2": 0.3,
+					"T3": 0.2,
+					"T4": 0.2
+				}
+			}
+		},
+		{
+			"code": "EMC824",
+			"name": "Simulação Computacional em Engenharia Mecânica",
+			"course": "engenharia-mecanica",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.2,
+					"T2": 0.3,
+					"T3": 0.2,
+					"T4": 0.3
+				}
+			}
+		},
+		{
+			"code": "EMC825",
+			"name": "Tópicos em Bioengenharia",
+			"course": "engenharia-mecanica",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.1,
+					"T2": 0.1,
+					"T3": 0.1,
+					"T4": 0.7
+				}
+			}
+		},
+		{
+			"code": "EMC903",
+			"name": "Trabalho de Conclusão de Curso",
+			"course": "engenharia-mecanica",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.1,
+					"T2": 0.1,
+					"T3": 0.2,
+					"T4": 0.6
+				}
+			}
+		},
+		{
+			"code": "EPM101",
+			"name": "Pesquisa Operacional I - Modelos Determinísticos",
+			"course": "engenharia-de-producao",
+			"period": "annual",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EPM103",
+			"name": "Pesquisa Operacional II - Mod. Probab. e Simulação",
+			"course": "engenharia-de-producao",
+			"period": "annual",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EPM107",
+			"name": "Probabilidade e Estatística para Eng de Produção",
+			"course": "engenharia-de-producao",
+			"period": "annual",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EPM121",
+			"name": "Sistemas de Informação I",
+			"course": "engenharia-de-producao",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.15,
+					"T2": 0.15,
+					"T3": 0.15,
+					"T4": 0.15,
+					"T5": 0.4
+				}
+			}
+		},
+		{
+			"code": "EPM123",
+			"name": "Sistemas de Informação II",
+			"course": "engenharia-de-producao",
+			"period": "annual",
+			"exams": {
+				"weight": 0.4,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.6,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EPM204",
+			"name": "Economia de Empresas",
+			"course": "engenharia-de-producao",
+			"period": "annual",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EPM206",
+			"name": "Projetos Industriais",
+			"course": "engenharia-de-producao",
+			"period": "annual",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.15,
+					"T2": 0.15,
+					"T3": 0.3,
+					"T4": 0.4
+				}
+			}
+		},
+		{
+			"code": "EPM305",
+			"name": "Administração de Pessoas",
+			"course": "engenharia-de-producao",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EPM306",
+			"name": "Introdução à Engenharia de Produção",
+			"course": "engenharia-de-producao",
+			"period": "annual",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 1
+				}
+			}
+		},
+		{
+			"code": "EPM308",
+			"name": "Ciências Térmicas II",
+			"course": "engenharia-de-producao",
+			"period": "annual",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.3333333333,
+					"T2": 0.3333333333,
+					"T3": 0.1666666667,
+					"T4": 0.1666666667
+				}
+			}
+		},
+		{
+			"code": "EPM309",
+			"name": "Ferramentas de Gerenciamento de Sist. Produtivos",
+			"course": "engenharia-de-producao",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "EPM403",
+			"name": "Proj de Prod e Gerenciamento do seu Ciclo de Vida",
+			"course": "engenharia-de-producao",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.3,
+					"T2": 0.7
+				}
+			}
+		},
+		{
+			"code": "EPM404",
+			"name": "Qualidade",
+			"course": "engenharia-de-producao",
+			"period": "annual",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.2,
+					"T2": 0.2,
+					"T3": 0.6
+				}
+			}
+		},
+		{
+			"code": "EPM405",
+			"name": "Logística",
+			"course": "engenharia-de-producao",
+			"period": "annual",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EPM407",
+			"name": "Ergonomia",
+			"course": "engenharia-de-producao",
+			"period": "annual",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.3333333333,
+					"T2": 0.3333333333,
+					"T3": 0.3333333333
+				}
+			}
+		},
+		{
+			"code": "EPM408",
+			"name": "Metodologia da Pesquisa Científica e Tecnológica",
+			"course": "engenharia-de-producao",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EPM409",
+			"name": "Planejamento e Controle da Produção I",
+			"course": "engenharia-de-producao",
+			"period": "annual",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EPM413",
+			"name": "Projeto de Fábrica",
+			"course": "engenharia-de-producao",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.1,
+					"T2": 0.15,
+					"T3": 0.25,
+					"T4": 0.5
+				}
+			}
+		},
+		{
+			"code": "EPM414",
+			"name": "Gerenciamento de Sistemas Produtivos",
+			"course": "engenharia-de-producao",
+			"period": "annual",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EPM505",
+			"name": "Gerenciamento de Sistemas Produtivos Inteligentes",
+			"course": "engenharia-de-producao",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EPM506",
+			"name": "Planejamento e Controle da Produção II",
+			"course": "engenharia-de-producao",
+			"period": "annual",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EPM507",
+			"name": "Gestão da Cadeia e Suprimentos",
+			"course": "engenharia-de-producao",
+			"period": "annual",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EPM602",
+			"name": "Gestão Energética e Ambiental",
+			"course": "engenharia-de-producao",
+			"period": "annual",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EPM706",
+			"name": "Ciências Térmicas I",
+			"course": "engenharia-de-producao",
+			"period": "annual",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EPM806",
+			"name": "Trabalho de Conclusão de Curso",
+			"course": "engenharia-de-producao",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.3333333333,
+					"T2": 0.6666666667
+				}
+			}
+		},
+		{
+			"code": "EPM933",
+			"name": "Estratégias de Marketing: Teoria & Prática",
+			"course": "engenharia-de-producao",
+			"period": "annual",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EPM942",
+			"name": "Princípios de Gestão Financeira",
+			"course": "engenharia-de-producao",
+			"period": "annual",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EPM983",
+			"name": "Tópicos Avançados em Logísticas",
+			"course": "engenharia-de-producao",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "EPM985",
+			"name": "Mercado Financeiro e de Capitais",
+			"course": "engenharia-de-producao",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "EQM206",
+			"name": "Operações Unitárias da Indústria Química I",
+			"course": "engenharia-quimica",
+			"period": "annual",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "EQM210",
+			"name": "Termodinâmica para Engenharia Química",
+			"course": "engenharia-quimica",
+			"period": "annual",
+			"exams": {
+				"weight": 0.65,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.35,
+				"items": {
+					"T1": 0.18,
+					"T2": 0.18,
+					"T3": 0.64
+				}
+			}
+		},
+		{
+			"code": "EQM212",
+			"name": "Química Aplicada II",
+			"course": "engenharia-quimica",
+			"period": "annual",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.1666666667,
+					"T2": 0.1666666667,
+					"T3": 0.1666666667,
+					"T4": 0.1666666667,
+					"T5": 0.1666666667,
+					"T6": 0.1666666667
+				}
+			}
+		},
+		{
+			"code": "EQM213",
+			"name": "Operações Unitárias da Industria Química II",
+			"course": "engenharia-quimica",
+			"period": "annual",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "EQM303",
+			"name": "Engenharia das Reações Químicas",
+			"course": "engenharia-quimica",
+			"period": "annual",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "EQM304",
+			"name": "Laboratório de Engenharia Química I",
+			"course": "engenharia-quimica",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "EQM402",
+			"name": "Engenharia dos Processos Biotecnológicos",
+			"course": "engenharia-quimica",
+			"period": "annual",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "EQM403",
+			"name": "Laboratório de Engenharia Química II",
+			"course": "engenharia-quimica",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "EQM405",
+			"name": "Instrumentação, Simulação e Controle de Processos",
+			"course": "engenharia-quimica",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "EQM406",
+			"name": "Eng. de Processos Aplic. ao Tratamento de Resíduos",
+			"course": "engenharia-quimica",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "EQM603",
+			"name": "Materiais para Engenharia Química",
+			"course": "engenharia-quimica",
+			"period": "annual",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "EQM946",
+			"name": "Ciência e Tecnologia de Polímeros",
+			"course": "engenharia-quimica",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "EQM947",
+			"name": "Desenvolvimento de Cosméticos",
+			"course": "engenharia-quimica",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "EQM984",
+			"name": "Petróleo e Petroquímica",
+			"course": "engenharia-quimica",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "ETC102",
+			"name": "Urbanismo",
+			"course": "engenharia-civil",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.125,
+					"T2": 0.125,
+					"T3": 0.25,
+					"T4": 0.5
+				}
+			}
+		},
+		{
+			"code": "ETC106",
+			"name": "Arquitetura das Edificações e Desenho Universal",
+			"course": "engenharia-civil",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.125,
+					"T2": 0.125,
+					"T3": 0.25,
+					"T4": 0.5
+				}
+			}
+		},
+		{
+			"code": "ETC107",
+			"name": "Representações Gráficas",
+			"course": "engenharia-civil",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.1666666667,
+					"T2": 0.1666666667,
+					"T3": 0.3333333333,
+					"T4": 0.3333333333
+				}
+			}
+		},
+		{
+			"code": "ETC108",
+			"name": "Tecnologia e Gestão BIM",
+			"course": "engenharia-civil",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ETC208",
+			"name": "Infraestrutura Ferroviária",
+			"course": "engenharia-civil",
+			"period": "semester",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 1
+				}
+			}
+		},
+		{
+			"code": "ETC212",
+			"name": "Planejamento de Transportes",
+			"course": "engenharia-civil",
+			"period": "annual",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ETC213",
+			"name": "Tóp Complem de Pavimentação - Gestão de Pavimentos",
+			"course": "engenharia-civil",
+			"period": "semester",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ETC215",
+			"name": "Projeto de Rodovias e Vias Urbanas",
+			"course": "engenharia-civil",
+			"period": "annual",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.3,
+					"T2": 0.4,
+					"T3": 0.15,
+					"T4": 0.15
+				}
+			}
+		},
+		{
+			"code": "ETC216",
+			"name": "Topografia e Geomática",
+			"course": "engenharia-civil",
+			"period": "annual",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.1,
+					"T2": 0.4,
+					"T3": 0.1,
+					"T4": 0.4
+				}
+			}
+		},
+		{
+			"code": "ETC217",
+			"name": "Infraestrutura Aeroportuária",
+			"course": "engenharia-civil",
+			"period": "semester",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 1
+				}
+			}
+		},
+		{
+			"code": "ETC302",
+			"name": "Resistência dos Materiais II",
+			"course": "engenharia-civil",
+			"period": "annual",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.6
+				}
+			}
+		},
+		{
+			"code": "ETC310",
+			"name": "Resistência dos Materiais I",
+			"course": "engenharia-civil",
+			"period": "annual",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "ETC314",
+			"name": "Teoria das Estruturas",
+			"course": "engenharia-civil",
+			"period": "annual",
+			"exams": {
+				"weight": 0.75,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.25,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "ETC321",
+			"name": "Modelagem Computacional de Estruturas",
+			"course": "engenharia-civil",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ETC322",
+			"name": "Projeto de Estruturas Assistido por Computador",
+			"course": "engenharia-civil",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ETC323",
+			"name": "Estruturas de Concreto",
+			"course": "engenharia-civil",
+			"period": "annual",
+			"exams": {
+				"weight": 0.75,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.25,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ETC326",
+			"name": "Estruturas Metálicas e de Madeiras",
+			"course": "engenharia-civil",
+			"period": "annual",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.2,
+					"T2": 0.2,
+					"T3": 0.2,
+					"T4": 0.2,
+					"T5": 0.2
+				}
+			}
+		},
+		{
+			"code": "ETC327",
+			"name": "Pontes",
+			"course": "engenharia-civil",
+			"period": "annual",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ETC411",
+			"name": "Fenômenos de Transporte",
+			"course": "engenharia-civil",
+			"period": "annual",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.2,
+					"T2": 0.2,
+					"T3": 0.2,
+					"T4": 0.2,
+					"T5": 0.2
+				}
+			}
+		},
+		{
+			"code": "ETC413",
+			"name": "Hidráulica",
+			"course": "engenharia-civil",
+			"period": "annual",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.125,
+					"T2": 0.125,
+					"T3": 0.125,
+					"T4": 0.125,
+					"T5": 0.125,
+					"T6": 0.125,
+					"T7": 0.125,
+					"T8": 0.125
+				}
+			}
+		},
+		{
+			"code": "ETC414",
+			"name": "Hidrologia",
+			"course": "engenharia-civil",
+			"period": "annual",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "ETC415",
+			"name": "Instalações Prediais Hidráulicas",
+			"course": "engenharia-civil",
+			"period": "annual",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.2,
+					"T2": 0.3,
+					"T3": 0.2,
+					"T4": 0.3
+				}
+			}
+		},
+		{
+			"code": "ETC417",
+			"name": "Obras e Gestão de Portos e Costas",
+			"course": "engenharia-civil",
+			"period": "annual",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "ETC419",
+			"name": "Gerenciamento de Áreas Contaminadas",
+			"course": "engenharia-civil",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.1,
+					"T2": 0.1,
+					"T3": 0.2,
+					"T4": 0.3,
+					"T5": 0.3
+				}
+			}
+		},
+		{
+			"code": "ETC420",
+			"name": "Saneamento Ambiental",
+			"course": "engenharia-civil",
+			"period": "annual",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.2,
+					"T2": 0.3,
+					"T3": 0.2,
+					"T4": 0.3
+				}
+			}
+		},
+		{
+			"code": "ETC421",
+			"name": "Gestão da Água para Abast e Marco Legal do Saneam",
+			"course": "engenharia-civil",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ETC422",
+			"name": "Gestão de Resíduos Líquidos e Sólidos",
+			"course": "engenharia-civil",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ETC509",
+			"name": "Mecânica dos Solos e Obras de Terra",
+			"course": "engenharia-civil",
+			"period": "annual",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ETC510",
+			"name": "Fundações",
+			"course": "engenharia-civil",
+			"period": "annual",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ETC511",
+			"name": "Reforços em Aterros e Taludes I",
+			"course": "engenharia-civil",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ETC512",
+			"name": "Reforços em Aterros e Taludes II",
+			"course": "engenharia-civil",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ETC515",
+			"name": "Geologia de Engenharia e Ambiental",
+			"course": "engenharia-civil",
+			"period": "annual",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "ETC516",
+			"name": "Tópicos de Túneis e Estruturas Subterraneas",
+			"course": "engenharia-civil",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ETC614",
+			"name": "Planejamento da Construção Civil",
+			"course": "engenharia-civil",
+			"period": "annual",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ETC615",
+			"name": "Materiais de Construção Civil",
+			"course": "engenharia-civil",
+			"period": "annual",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.2,
+					"T2": 0.2,
+					"T3": 0.3,
+					"T4": 0.3
+				}
+			}
+		},
+		{
+			"code": "ETC616",
+			"name": "Construção de Edifícios",
+			"course": "engenharia-civil",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.125,
+					"T2": 0.125,
+					"T3": 0.25,
+					"T4": 0.5
+				}
+			}
+		},
+		{
+			"code": "ETC620",
+			"name": "Conforto Térmico e Climatização das Edificações",
+			"course": "engenharia-civil",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ETC623",
+			"name": "Patologia e Terapia das Construções",
+			"course": "engenharia-civil",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ETC624",
+			"name": "Sustentabilidade na Construção Civil",
+			"course": "engenharia-civil",
+			"period": "semester",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "ETC626",
+			"name": "BIM: Ferramentas",
+			"course": "engenharia-civil",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ETC628",
+			"name": "Instalações Prediais Elétricas",
+			"course": "engenharia-civil",
+			"period": "annual",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.6
+				}
+			}
+		},
+		{
+			"code": "ETC803",
+			"name": "Trabalho de Conclusão de Curso",
+			"course": "engenharia-civil",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.1,
+					"T2": 0.2,
+					"T3": 0.1,
+					"T4": 0.15,
+					"T5": 0.45
+				}
+			}
+		},
+		{
+			"code": "ETE102",
+			"name": "Fundamentos de Circuitos Digitais",
+			"course": "tronco-eletrica",
+			"period": "semester",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.8333333333,
+					"T2": 0.1666666667
+				}
+			}
+		},
+		{
+			"code": "ETE103",
+			"name": "Fundamentos de Circuitos Analógicos",
+			"course": "tronco-eletrica",
+			"period": "semester",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.8333333333,
+					"T2": 0.1666666667
+				}
+			}
+		},
+		{
+			"code": "ETE202",
+			"name": "Eletrônica Analógica",
+			"course": "tronco-eletrica",
+			"period": "annual",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.3,
+					"T2": 0.2,
+					"T3": 0.3,
+					"T4": 0.2
+				}
+			}
+		},
+		{
+			"code": "ETE203",
+			"name": "Eletrônica Digital",
+			"course": "tronco-eletrica",
+			"period": "annual",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.3,
+					"T2": 0.2,
+					"T3": 0.3,
+					"T4": 0.2
+				}
+			}
+		},
+		{
+			"code": "ETE204",
+			"name": "Sistemas e Sinais",
+			"course": "tronco-eletrica",
+			"period": "annual",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "ETE211",
+			"name": "Circuitos Elétricos",
+			"course": "tronco-eletrica",
+			"period": "annual",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "ETE212",
+			"name": "Eletromagnetismo I",
+			"course": "tronco-eletrica",
+			"period": "annual",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "ETE702",
+			"name": "Resistência dos Materiais",
+			"course": "tronco-eletrica",
+			"period": "annual",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ETE802",
+			"name": "Fenômenos de Transporte",
+			"course": "tronco-eletrica",
+			"period": "annual",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.3333333333,
+					"T2": 0.3333333333,
+					"T3": 0.3333333333
+				}
+			}
+		},
+		{
+			"code": "ETE803",
+			"name": "Mobilidade Elétrica - Introdução e Tecnologia",
+			"course": "tronco-eletrica",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.125,
+					"T2": 0.125,
+					"T3": 0.125,
+					"T4": 0.125,
+					"T5": 0.125,
+					"T6": 0.125,
+					"T7": 0.125,
+					"T8": 0.125
+				}
+			}
+		},
+		{
+			"code": "ETM101",
+			"name": "Resistência dos Materiais",
+			"course": "tronco-mecanica",
+			"period": "annual",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ETM102",
+			"name": "Resistência dos Materiais",
+			"course": "tronco-mecanica",
+			"period": "annual",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ETM203",
+			"name": "Materiais de Construção Mecânica I",
+			"course": "tronco-mecanica",
+			"period": "annual",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "ETM302",
+			"name": "Introdução a Projeto e Manufatura",
+			"course": "tronco-mecanica",
+			"period": "annual",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.1428571429,
+					"T2": 0.1428571429,
+					"T3": 0.2857142857,
+					"T4": 0.2857142857,
+					"T5": 0.1428571429
+				}
+			}
+		},
+		{
+			"code": "ETM402",
+			"name": "Eletricidade",
+			"course": "tronco-mecanica",
+			"period": "annual",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.4,
+					"P2": 0.6
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ETQ203",
+			"name": "Fundamentos de Eng de Processos e Termodinâmica",
+			"course": "tronco-quimica",
+			"period": "annual",
+			"exams": {
+				"weight": 0.65,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.35,
+				"items": {
+					"T1": 0.2,
+					"T2": 0.2,
+					"T3": 0.2,
+					"T4": 0.2,
+					"T5": 0.2
+				}
+			}
+		},
+		{
+			"code": "ETQ205",
+			"name": "Química Aplicada I",
+			"course": "tronco-quimica",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.1333333333,
+					"T2": 0.1333333333,
+					"T3": 0.1,
+					"T4": 0.0666666667,
+					"T5": 0.1333333333,
+					"T6": 0.1333333333,
+					"T7": 0.1,
+					"T8": 0.0666666667,
+					"T9": 0.1333333333
+				}
+			}
+		},
+		{
+			"code": "ETQ305",
+			"name": "Fenômenos de Transporte",
+			"course": "tronco-quimica",
+			"period": "annual",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.2,
+					"P2": 0.2,
+					"P3": 0.3,
+					"P4": 0.3
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "ETQ406",
+			"name": "Projetos Industriais I",
+			"course": "tronco-quimica",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 1
+				}
+			}
+		},
+		{
+			"code": "ETQ503",
+			"name": "Eletricidade",
+			"course": "tronco-quimica",
+			"period": "semester",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 1
+				}
+			}
+		},
+		{
+			"code": "ETQ504",
+			"name": "Gestão de Processos Industriais",
+			"course": "tronco-quimica",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 1
+				}
+			}
+		},
+		{
+			"code": "ETQ505",
+			"name": "Projetos Industriais",
+			"course": "tronco-quimica",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ETQ603",
+			"name": "Resistência dos Materiais",
+			"course": "tronco-quimica",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 1
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "ETQ803",
+			"name": "Trabalho de Conclusão de Curso",
+			"course": "tronco-quimica",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.05,
+					"T2": 0.1,
+					"T3": 0.05,
+					"T4": 0.1,
+					"T5": 0.05,
+					"T6": 0.05,
+					"T7": 0.2,
+					"T8": 0.4
+				}
+			}
+		},
+		{
+			"code": "ETQ806",
+			"name": "Tecnologia de Bebidas e Alimentos Fermentados",
+			"course": "tronco-quimica",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "ETQ807",
+			"name": "Fungos: Inov Sust na Ind, Meio Amb. e Agricultura",
+			"course": "tronco-quimica",
+			"period": "annual",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "ETQ808",
+			"name": "Aplicação de Micro-ondas a Proc Quim e Alimentíc",
+			"course": "tronco-quimica",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "SIN201",
+			"name": "Ambiente Organizacional e Processo de Negócio",
+			"course": "sistemas-de-informacao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.4,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.6,
+				"items": {
+					"T1": 0.25,
+					"T2": 0.25,
+					"T3": 0.25,
+					"T4": 0.25
+				}
+			}
+		},
+		{
+			"code": "SIN202",
+			"name": "Estrutura de Dados",
+			"course": "sistemas-de-informacao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "SIN203",
+			"name": "Frameworks para Desenvolvimento Low Code",
+			"course": "sistemas-de-informacao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.3,
+					"T2": 0.3,
+					"T3": 0.4
+				}
+			}
+		},
+		{
+			"code": "SIN204",
+			"name": "Projeto Integrador Interdiciplinar - Sist. de Info",
+			"course": "sistemas-de-informacao",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.1,
+					"T2": 0.2,
+					"T3": 0.3,
+					"T4": 0.4
+				}
+			}
+		},
+		{
+			"code": "SIN205",
+			"name": "Fundamentos de Sistemas de Informação",
+			"course": "sistemas-de-informacao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.3,
+					"T3": 0.3
+				}
+			}
+		},
+		{
+			"code": "SIN301",
+			"name": "Ainda não existe",
+			"course": "sistemas-de-informacao",
+			"period": null
+		},
+		{
+			"code": "SIN302",
+			"name": "Ainda não existe",
+			"course": "sistemas-de-informacao",
+			"period": null
+		},
+		{
+			"code": "SIN303",
+			"name": "Ainda não existe",
+			"course": "sistemas-de-informacao",
+			"period": null
+		},
+		{
+			"code": "SIN304",
+			"name": "Ainda não existe",
+			"course": "sistemas-de-informacao",
+			"period": null
+		},
+		{
+			"code": "SIN305",
+			"name": "Ainda não existe",
+			"course": "sistemas-de-informacao",
+			"period": null
+		},
+		{
+			"code": "SIN306",
+			"name": "Ainda não existe",
+			"course": "sistemas-de-informacao",
+			"period": null
+		},
+		{
+			"code": "SIN307",
+			"name": "Ainda não existe",
+			"course": "sistemas-de-informacao",
+			"period": null
+		},
+		{
+			"code": "SIN401",
+			"name": "Ainda não existe",
+			"course": "sistemas-de-informacao",
+			"period": null
+		},
+		{
+			"code": "SIN402",
+			"name": "Ainda não existe",
+			"course": "sistemas-de-informacao",
+			"period": null
+		},
+		{
+			"code": "SIN403",
+			"name": "Ainda não existe",
+			"course": "sistemas-de-informacao",
+			"period": null
+		},
+		{
+			"code": "SIN404",
+			"name": "Ainda não existe",
+			"course": "sistemas-de-informacao",
+			"period": null
+		},
+		{
+			"code": "SIN405",
+			"name": "Ainda não existe",
+			"course": "sistemas-de-informacao",
+			"period": null
+		},
+		{
+			"code": "SIN406",
+			"name": "Ainda não existe",
+			"course": "sistemas-de-informacao",
+			"period": null
+		},
+		{
+			"code": "SIN407",
+			"name": "Ainda não existe",
+			"course": "sistemas-de-informacao",
+			"period": null
+		},
+		{
+			"code": "SIN408",
+			"name": "Ainda não existe",
+			"course": "sistemas-de-informacao",
+			"period": null
+		},
+		{
+			"code": "SIN409",
+			"name": "Ainda não existe",
+			"course": "sistemas-de-informacao",
+			"period": null
+		},
+		{
+			"code": "SIN901",
+			"name": "Ainda não existe",
+			"course": "sistemas-de-informacao",
+			"period": null
+		},
+		{
+			"code": "SIN902",
+			"name": "Ainda não existe",
+			"course": "sistemas-de-informacao",
+			"period": null
+		},
+		{
+			"code": "SIN903",
+			"name": "Ainda não existe",
+			"course": "sistemas-de-informacao",
+			"period": null
+		},
+		{
+			"code": "SIN904",
+			"name": "Ainda não existe",
+			"course": "sistemas-de-informacao",
+			"period": null
+		},
+		{
+			"code": "TTI101",
+			"name": "Programação Orientada a Objetos",
+			"course": "tronco-tecnologias-de-informacao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.4,
+					"T3": 0.2
+				}
+			}
+		},
+		{
+			"code": "TTI102",
+			"name": "Banco de Dados Relacionais",
+			"course": "tronco-tecnologias-de-informacao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.7,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.3,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "TTI103",
+			"name": "Lógica de Programação",
+			"course": "tronco-tecnologias-de-informacao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.4,
+					"T3": 0.2
+				}
+			}
+		},
+		{
+			"code": "TTI104",
+			"name": "Modelagem Orientada a Objetos",
+			"course": "tronco-tecnologias-de-informacao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.4,
+					"T3": 0.2
+				}
+			}
+		},
+		{
+			"code": "TTI105",
+			"name": "Projeto Integrador Interdisciplinar - Programação",
+			"course": "tronco-tecnologias-de-informacao",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.1,
+					"T2": 0.2,
+					"T3": 0.3,
+					"T4": 0.4
+				}
+			}
+		},
+		{
+			"code": "TTI106",
+			"name": "Interface e Experiência do Usuário",
+			"course": "tronco-tecnologias-de-informacao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "TTI107",
+			"name": "Desenvolvimento Front End",
+			"course": "tronco-tecnologias-de-informacao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.4,
+					"T3": 0.2
+				}
+			}
+		},
+		{
+			"code": "TTI108",
+			"name": "Legislação e Etica em Tecnologia da Informação",
+			"course": "tronco-tecnologias-de-informacao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "TTI109",
+			"name": "Estatística",
+			"course": "tronco-tecnologias-de-informacao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.4,
+					"T3": 0.2
+				}
+			}
+		},
+		{
+			"code": "TTI110",
+			"name": "Lógica Matemática e Matemática Discreta",
+			"course": "tronco-tecnologias-de-informacao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.6,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.4,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "TTI111",
+			"name": "Projeto Integrador Interdisciplinar - Front End",
+			"course": "tronco-tecnologias-de-informacao",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.1,
+					"T2": 0.2,
+					"T3": 0.3,
+					"T4": 0.4
+				}
+			}
+		},
+		{
+			"code": "TTI201",
+			"name": "Paradigmas e Linguagens de Programação",
+			"course": "tronco-tecnologias-de-informacao",
+			"period": "semester",
+			"exams": {
+				"weight": 1,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			}
+		},
+		{
+			"code": "TTI202",
+			"name": "Desenvolvimento Ágil",
+			"course": "tronco-tecnologias-de-informacao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.5,
+					"T2": 0.5
+				}
+			}
+		},
+		{
+			"code": "TTI203",
+			"name": "Desenvolvimento Multiplataforma",
+			"course": "tronco-tecnologias-de-informacao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.4,
+					"T2": 0.4,
+					"T3": 0.2
+				}
+			}
+		},
+		{
+			"code": "TTI204",
+			"name": "Banco de Dados Não Relacionais e Big Data",
+			"course": "tronco-tecnologias-de-informacao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.9,
+					"T2": 0.1
+				}
+			}
+		},
+		{
+			"code": "TTI205",
+			"name": "Engenharia de Software",
+			"course": "tronco-tecnologias-de-informacao",
+			"period": "semester",
+			"exams": {
+				"weight": 0.5,
+				"items": {
+					"P1": 0.5,
+					"P2": 0.5
+				}
+			},
+			"assignments": {
+				"weight": 0.5,
+				"items": {
+					"T1": 0.8,
+					"T2": 0.2
+				}
+			}
+		},
+		{
+			"code": "TTI206",
+			"name": "Proj Integrador Interdisciplinar-Desenv Multiplata",
+			"course": "tronco-tecnologias-de-informacao",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 0.1,
+					"T2": 0.2,
+					"T3": 0.3,
+					"T4": 0.4
+				}
+			}
+		},
+		{
+			"code": "TTI301",
+			"name": "Ainda não existe",
+			"course": "tronco-tecnologias-de-informacao",
+			"period": null
+		},
+		{
+			"code": "TTI302",
+			"name": "Ainda não existe",
+			"course": "tronco-tecnologias-de-informacao",
+			"period": null
+		},
+		{
+			"code": "TTI303",
+			"name": "Ainda não existe",
+			"course": "tronco-tecnologias-de-informacao",
+			"period": null
+		},
+		{
+			"code": "TTI304",
+			"name": "Ainda não existe",
+			"course": "tronco-tecnologias-de-informacao",
+			"period": null
+		},
+		{
+			"code": "TTI901",
+			"name": "Ainda não existe",
+			"course": "tronco-tecnologias-de-informacao",
+			"period": null
+		},
+		{
+			"code": "LIBR01",
+			"name": "Língua Brasileira de Sinais - Básico",
+			"course": "libras",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 1
+				}
+			}
+		},
+		{
+			"code": "LIBR02",
+			"name": "Lingua Brasileira de Sinais - Avançado",
+			"course": "libras",
+			"period": "semester",
+			"assignments": {
+				"weight": 1,
+				"items": {
+					"T1": 1
+				}
+			}
+		}
+	]
+}

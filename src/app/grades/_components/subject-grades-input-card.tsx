@@ -17,6 +17,7 @@ import {
 } from "@/components/ui/collapsible";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { assessmentGroups } from "@/lib/grades";
 import type { SubjectGrades } from "@/types/grades";
 import type { Subject } from "@/types/subjects";
 
@@ -54,59 +55,32 @@ export function SubjectGradesInputCard({
 
 				<CollapsibleContent>
 					<CardContent className="gap-4">
-						{subject.examWeight > 0 && (
-							<section className="flex flex-col gap-2">
+						{assessmentGroups(subject).map(({ label, group }) => (
+							<section key={label} className="flex flex-col gap-2">
 								<h3 className="font-medium">
-									Provas ({subject.examWeight.toFixed(0)}%)
+									{label} ({Math.round(group.weight * 100)}%)
 								</h3>
 								<div className="grid grid-cols-2 gap-4">
-									{subject.exams.map((exam) => (
-										<div key={exam.name} className="flex flex-col gap-2">
-											<Label htmlFor={`${subject.code}-${exam.name}`}>
-												{exam.name} ({exam.weight.toFixed(2)})
+									{Object.entries(group.items).map(([name, weight]) => (
+										<div key={name} className="flex flex-col gap-2">
+											<Label htmlFor={`${subject.code}-${name}`}>
+												{name} ({weight.toFixed(2)})
 											</Label>
 											<Input
-												id={`${subject.code}-${exam.name}`}
+												id={`${subject.code}-${name}`}
 												type="number"
 												min="0"
 												max="10"
-												value={grades[exam.name] || ""}
+												value={grades[name] || ""}
 												onChange={(e) =>
-													onGradeChange(exam.name, Number(e.target.value))
+													onGradeChange(name, Number(e.target.value))
 												}
 											/>
 										</div>
 									))}
 								</div>
 							</section>
-						)}
-
-						{subject.assignmentWeight > 0 && (
-							<section className="flex flex-col gap-2">
-								<h3 className="font-medium">
-									Trabalhos ({subject.assignmentWeight.toFixed(0)}%)
-								</h3>
-								<div className="grid grid-cols-2 gap-4">
-									{subject.assignments.map((assignment) => (
-										<div key={assignment.name} className="flex flex-col gap-2">
-											<Label htmlFor={`${subject.code}-${assignment.name}`}>
-												{assignment.name} ({assignment.weight.toFixed(2)})
-											</Label>
-											<Input
-												id={`${subject.code}-${assignment.name}`}
-												type="number"
-												min="0"
-												max="10"
-												value={grades[assignment.name] || ""}
-												onChange={(e) =>
-													onGradeChange(assignment.name, Number(e.target.value))
-												}
-											/>
-										</div>
-									))}
-								</div>
-							</section>
-						)}
+						))}
 					</CardContent>
 				</CollapsibleContent>
 			</Card>

@@ -1,14 +1,7 @@
-export interface Subject {
-	course: string;
-	name: string;
-	code: string;
-	period: string;
-	examWeight: number;
-	assignmentWeight: number;
-	exams: { name: string; weight: number }[];
-	assignments: { name: string; weight: number }[];
-}
+import type { Catalogue } from "@/data/schema";
 
-export interface Subjects {
-	[key: string]: Subject;
-}
+export type Subject = Catalogue["subjects"][number];
+
+export type AssessmentGroup = NonNullable<Subject["exams"]>;
+
+export type CourseId = keyof Catalogue["courses"];
