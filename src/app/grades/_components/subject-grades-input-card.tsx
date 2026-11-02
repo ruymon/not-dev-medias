@@ -1,8 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
 import {
 	Card,
+	CardAction,
 	CardContent,
 	CardDescription,
 	CardHeader,
@@ -32,30 +34,34 @@ export function SubjectGradesInputCard({
 	const [isGradesPanelOpen, setIsGradesPanelOpen] = useState(false);
 
 	return (
-		<Card className="border-none py-4 flex flex-col shadow-none">
-			<Collapsible open={isGradesPanelOpen} onOpenChange={setIsGradesPanelOpen}>
-				<div className="flex items-center justify-between">
-					<CardHeader className="flex-1 gap-0 p-0">
-						<CardDescription>{subject.code}</CardDescription>
-						<CardTitle className="text-secondary-foreground text-xl font-bold">
-							{subject.name}
-						</CardTitle>
-					</CardHeader>
-					<CollapsibleTrigger className="text-sm text-muted-foreground">
-						{isGradesPanelOpen ? "Esconder" : "Mostrar"} detalhes
-					</CollapsibleTrigger>
-				</div>
+		<Collapsible
+			open={isGradesPanelOpen}
+			onOpenChange={setIsGradesPanelOpen}
+			asChild
+		>
+			<Card size="sm">
+				<CardHeader>
+					<CardDescription>{subject.code}</CardDescription>
+					<CardTitle>{subject.name}</CardTitle>
+					<CardAction>
+						<CollapsibleTrigger asChild>
+							<Button variant="ghost" size="sm">
+								{isGradesPanelOpen ? "Esconder" : "Mostrar"} notas
+							</Button>
+						</CollapsibleTrigger>
+					</CardAction>
+				</CardHeader>
 
-				<CollapsibleContent className="pt-2">
-					<CardContent className="px-0 py-2 flex flex-col gap-4">
-						{subject.examWeight > 0 && subject.exams && (
+				<CollapsibleContent>
+					<CardContent className="gap-4">
+						{subject.examWeight > 0 && (
 							<section className="flex flex-col gap-2">
-								<h3 className="font-semibold text-base">
+								<h3 className="font-medium">
 									Provas ({subject.examWeight.toFixed(0)}%)
 								</h3>
 								<div className="grid grid-cols-2 gap-4">
 									{subject.exams.map((exam) => (
-										<div key={exam.name}>
+										<div key={exam.name} className="flex flex-col gap-2">
 											<Label htmlFor={`${subject.code}-${exam.name}`}>
 												{exam.name} ({exam.weight.toFixed(2)})
 											</Label>
@@ -75,14 +81,14 @@ export function SubjectGradesInputCard({
 							</section>
 						)}
 
-						{subject.assignmentWeight > 0 && subject.assignments && (
-							<section>
-								<h3 className="font-semibold mb-2">
+						{subject.assignmentWeight > 0 && (
+							<section className="flex flex-col gap-2">
+								<h3 className="font-medium">
 									Trabalhos ({subject.assignmentWeight.toFixed(0)}%)
 								</h3>
 								<div className="grid grid-cols-2 gap-4">
 									{subject.assignments.map((assignment) => (
-										<div key={assignment.name}>
+										<div key={assignment.name} className="flex flex-col gap-2">
 											<Label htmlFor={`${subject.code}-${assignment.name}`}>
 												{assignment.name} ({assignment.weight.toFixed(2)})
 											</Label>
@@ -103,7 +109,7 @@ export function SubjectGradesInputCard({
 						)}
 					</CardContent>
 				</CollapsibleContent>
-			</Collapsible>
-		</Card>
+			</Card>
+		</Collapsible>
 	);
 }

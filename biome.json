@@ -6,7 +6,8 @@
 		"useIgnoreFile": true
 	},
 	"files": {
-		"ignoreUnknown": true
+		"ignoreUnknown": true,
+		"includes": ["**", "!components.json", "!src/components/ui"]
 	},
 	"formatter": {
 		"enabled": true,

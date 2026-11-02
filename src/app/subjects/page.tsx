@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import { Fragment, Suspense } from "react";
-import { Separator } from "@/components/ui/separator";
+import { Suspense } from "react";
 import {
 	AVAILABLE_COURSES,
 	filterSubjects,
@@ -46,7 +45,7 @@ export default function SubjectsPage({ searchParams }: PageProps<"/subjects">) {
 				</Suspense>
 			</aside>
 
-			<ul className="flex flex-col flex-1 gap-2">
+			<ul className="flex flex-col flex-1 gap-3">
 				<Suspense fallback={<SubjectsListSkeleton />}>
 					<SubjectsList searchParams={searchParams} />
 				</Suspense>
@@ -69,22 +68,21 @@ async function SubjectsList({ searchParams }: { searchParams: SearchParams }) {
 
 	if (subjects.length === 0) {
 		return (
-			<div className="w-full py-4 flex-col flex items-center justify-center">
+			<li className="w-full py-4 flex-col flex items-center justify-center">
 				<h3 className="text-lg font-medium text-accent-foreground">
 					Eita... Algo deu errado.
 				</h3>
 				<span className="text-muted-foreground text-sm font-normal">
 					Nenhuma matéria encontrada com os filtros aplicados.
 				</span>
-			</div>
+			</li>
 		);
 	}
 
 	return subjects.map((subject) => (
-		<Fragment key={subject.code}>
+		<li key={subject.code}>
 			<SubjectCard subject={subject} searchTerm={searchTerm} />
-			<Separator className="bg-muted" />
-		</Fragment>
+		</li>
 	));
 }
 
@@ -93,7 +91,6 @@ function SubjectsListSkeleton() {
 		// biome-ignore lint/suspicious/noArrayIndexKey: static placeholder list
 		<li key={index} className="group">
 			<SubjectCardSkeleton />
-			<Separator className="bg-muted/50" />
 		</li>
 	));
 }

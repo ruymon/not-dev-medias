@@ -13,7 +13,7 @@ export function HighlightText({ text, searchTerm }: HighlightTextProps) {
 	return parts.map((part, index) =>
 		part.toLowerCase() === searchTerm ? (
 			// biome-ignore lint/suspicious/noArrayIndexKey: parts come from a fixed split of `text`
-			<mark key={index} className="bg-amber-300 text-foreground">
+			<mark key={index} className="bg-primary/20 text-foreground">
 				{part}
 			</mark>
 		) : (

@@ -1,8 +1,6 @@
 "use client";
 
-import { Fragment } from "react";
 import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
 import { useSubscribedSubjectsGradesStore } from "@/stores/subscribed-subjects-grades-store";
 import { useSubscribedSubjectsStore } from "@/stores/subscribed-subjects-store";
 import { ExportGrades } from "./export-grades";
@@ -46,30 +44,21 @@ export function GradesBoard() {
 
 	return (
 		<main className="flex py-8 container gap-16 flex-col md:flex-row">
-			<aside className="flex flex-col md:max-w-[30%]">
+			<aside className="md:max-w-[30%]">
 				{Object.keys(subscribedSubjects).length > 0 && (
-					<>
-						<GradeSummary
-							subscribedSubjects={subscribedSubjects}
-							grades={grades}
-						/>
-						<Button
-							onClick={handleClearGrades}
-							variant="outline"
-							size="lg"
-							className="rounded-none"
-						>
+					<GradeSummary subscribedSubjects={subscribedSubjects} grades={grades}>
+						<Button onClick={handleClearGrades} variant="outline">
 							Limpar valores
 						</Button>
 						<ExportGrades />
 						<ImportGradesButton />
-					</>
+					</GradeSummary>
 				)}
 			</aside>
 
-			<ul className="flex flex-col flex-1 gap-2">
+			<ul className="flex flex-col flex-1 gap-3">
 				{Object.values(subscribedSubjects).map((subject) => (
-					<Fragment key={subject.code}>
+					<li key={subject.code}>
 						<SubjectGradesInputCard
 							subject={subject}
 							grades={grades[subject.code] || {}}
@@ -77,8 +66,7 @@ export function GradesBoard() {
 								handleGradeChange(subject.code, examOrAssignment, grade)
 							}
 						/>
-						<Separator className="bg-muted" />
-					</Fragment>
+					</li>
 				))}
 
 				{isSubscribedSubjectsEmpty && (

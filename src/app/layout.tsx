@@ -1,14 +1,13 @@
-import { cn } from "cn";
 import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google";
+import { Geist } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import { Navbar } from "./_components/navbar";
 import "./globals.css";
 
-const fontSans = FontSans({
+const geist = Geist({
 	subsets: ["latin"],
-	variable: "--font-inter",
+	variable: "--font-sans",
 });
 
 export const metadata: Metadata = {
@@ -21,13 +20,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
 	return (
-		<html lang="pt-BR" suppressHydrationWarning>
-			<body
-				className={cn(
-					"min-h-screen bg-background font-sans antialiased flex flex-col",
-					fontSans.variable,
-				)}
-			>
+		<html lang="pt-BR" suppressHydrationWarning className={geist.variable}>
+			<body className="min-h-screen antialiased flex flex-col">
 				<ThemeProvider>
 					<Navbar />
 					{children}

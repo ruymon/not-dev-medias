@@ -19,8 +19,7 @@ export function ImportGradesButton() {
 		<Button
 			asChild
 			variant="outline"
-			size="lg"
-			className="rounded-t-none cursor-pointer has-focus-visible:ring-[3px] has-focus-visible:ring-ring/50"
+			className="cursor-pointer has-focus-visible:ring-[3px] has-focus-visible:ring-ring/50"
 		>
 			<label>
 				Importar notas

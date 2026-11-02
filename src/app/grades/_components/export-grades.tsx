@@ -41,12 +41,7 @@ export function ExportGrades() {
 	};
 
 	return (
-		<Button
-			onClick={handleExportGrades}
-			className="rounded-none"
-			variant="outline"
-			size="lg"
-		>
+		<Button onClick={handleExportGrades} variant="outline">
 			Exportar notas
 		</Button>
 	);

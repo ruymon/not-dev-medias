@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
 	Card,
+	CardAction,
 	CardContent,
 	CardDescription,
 	CardFooter,
@@ -49,34 +50,40 @@ export function SubjectCard({ subject, searchTerm }: SubjectCardProps) {
 	};
 
 	return (
-		<Card className="border-none py-4 flex flex-col gap-2 shadow-none">
-			<div className="flex items-center justify-between">
-				<CardHeader className="flex-1 gap-0 p-0">
+		<Collapsible
+			open={isMoreDetailsOpen}
+			onOpenChange={setIsMoreDetailsOpen}
+			asChild
+		>
+			<Card size="sm">
+				<CardHeader>
 					<CardDescription>
 						<HighlightText text={subject.code} searchTerm={searchTerm} />
 					</CardDescription>
-					<CardTitle className="text-secondary-foreground text-xl font-bold">
+					<CardTitle>
 						<HighlightText text={subject.name} searchTerm={searchTerm} />
 					</CardTitle>
+					<CardAction>
+						<Button
+							onClick={
+								isSubjectSubscribed ? handleUnsubscribe : handleSubscribe
+							}
+							variant={isSubjectSubscribed ? "destructive" : "secondary"}
+							size="sm"
+						>
+							{isSubjectSubscribed ? "Remover" : "Adicionar"}
+						</Button>
+					</CardAction>
 				</CardHeader>
-				<Button
-					onClick={isSubjectSubscribed ? handleUnsubscribe : handleSubscribe}
-					variant={isSubjectSubscribed ? "destructive" : "secondary"}
-					size="sm"
-				>
-					{isSubjectSubscribed ? "Remover" : "Adicionar"}
-				</Button>
-			</div>
 
-			<Collapsible open={isMoreDetailsOpen} onOpenChange={setIsMoreDetailsOpen}>
 				<CollapsibleContent>
-					<CardContent className="px-0 py-2 flex items-center gap-6">
-						{subject.exams && subject.examWeight > 0 && (
+					<CardContent className="flex-row gap-6">
+						{subject.examWeight > 0 && (
 							<div className="flex flex-col gap-1">
-								<span className="text-accent-foreground text-sm font-semibold">
+								<span className="font-medium">
 									Provas ({subject.examWeight.toFixed(0)}%)
 								</span>
-								<div className="flex items-center gap-2 text-sm text-muted-foreground">
+								<div className="flex items-center gap-2 text-muted-foreground">
 									{subject.exams.map((exam) => (
 										<span key={exam.name}>
 											{exam.name} ({exam.weight.toFixed(2)})
@@ -86,12 +93,12 @@ export function SubjectCard({ subject, searchTerm }: SubjectCardProps) {
 							</div>
 						)}
 
-						{subject.assignments && subject.assignmentWeight > 0 && (
+						{subject.assignmentWeight > 0 && (
 							<div className="flex flex-col gap-1">
-								<span className="text-accent-foreground text-sm font-semibold">
+								<span className="font-medium">
 									Trabalhos ({subject.assignmentWeight.toFixed(0)}%)
 								</span>
-								<div className="flex items-center gap-2 text-sm text-muted-foreground">
+								<div className="flex items-center gap-2 text-muted-foreground">
 									{subject.assignments.map((assignment) => (
 										<span key={assignment.name}>
 											{assignment.name} ({assignment.weight.toFixed(2)})
@@ -103,26 +110,15 @@ export function SubjectCard({ subject, searchTerm }: SubjectCardProps) {
 					</CardContent>
 				</CollapsibleContent>
 
-				<CardFooter className="justify-between px-0 pb-0 pt-2">
+				<CardFooter className="justify-between">
 					<Badge>{subject.course}</Badge>
-
-					<CollapsibleTrigger className="text-sm text-muted-foreground">
-						{isMoreDetailsOpen ? "Esconder" : "Mostrar"} detalhes
+					<CollapsibleTrigger asChild>
+						<Button variant="ghost" size="sm">
+							{isMoreDetailsOpen ? "Esconder" : "Mostrar"} detalhes
+						</Button>
 					</CollapsibleTrigger>
-
-					{/* <div className="flex flex-wrap gap-2 mt-1">
-          {subject.courses &&
-            Object.entries(subject.courses).map(([course, weight]) => (
-              <span
-                key={course}
-                className="text-xs font-medium rounded-full px-2 py-0.5 bg-muted text-muted-foreground"
-              >
-                {course} ({weight})
-              </span>
-            ))}
-        </div> */}
 				</CardFooter>
-			</Collapsible>
-		</Card>
+			</Card>
+		</Collapsible>
 	);
 }
