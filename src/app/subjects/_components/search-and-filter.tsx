@@ -7,8 +7,9 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { COURSES } from "@/data/courses";
 
-export function SearchAndFilter({ courses }: { courses: string[] }) {
+export function SearchAndFilter() {
 	const router = useRouter();
 	const searchParams = useSearchParams();
 	const [isPending, startTransition] = useTransition();
@@ -76,14 +77,14 @@ export function SearchAndFilter({ courses }: { courses: string[] }) {
 
 				<ScrollArea className="h-96">
 					<ul className="flex flex-col gap-4">
-						{courses.map((course) => (
-							<li key={course} className="flex items-center gap-2">
+						{Object.entries(COURSES).map(([id, name]) => (
+							<li key={id} className="flex items-center gap-2">
 								<Checkbox
-									id={course}
-									checked={selectedCourses.includes(course)}
-									onCheckedChange={() => handleCourseToggle(course)}
+									id={id}
+									checked={selectedCourses.includes(id)}
+									onCheckedChange={() => handleCourseToggle(id)}
 								/>
-								<Label htmlFor={course}>{course}</Label>
+								<Label htmlFor={id}>{name}</Label>
 							</li>
 						))}
 					</ul>

@@ -1,14 +1,17 @@
-export interface Subject {
-	course: string;
-	name: string;
-	code: string;
-	period: string;
-	examWeight: number;
-	assignmentWeight: number;
-	exams: { name: string; weight: number }[];
-	assignments: { name: string; weight: number }[];
+import type { COURSES } from "@/data/courses";
+
+export type CourseId = keyof typeof COURSES;
+
+export interface AssessmentGroup {
+	weight: number;
+	items: Record<string, number>;
 }
 
-export interface Subjects {
-	[key: string]: Subject;
+export interface Subject {
+	code: string;
+	name: string;
+	course: CourseId | null;
+	period: "annual" | "semester" | null;
+	exams?: AssessmentGroup;
+	assignments?: AssessmentGroup;
 }

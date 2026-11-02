@@ -6,23 +6,21 @@ import {
 	CardHeader,
 	CardTitle,
 } from "@/components/ui/card";
-import { calculateSubjectGrade } from "@/lib/grades";
+import { calculateSubjectGrade, formatGrade } from "@/lib/grades";
 import type { Grades } from "@/types/grades";
-import type { Subjects } from "@/types/subjects";
+import type { Subject } from "@/types/subjects";
 
 interface GradeSummaryProps {
-	subscribedSubjects: Subjects;
+	subjects: Subject[];
 	grades: Grades;
 	children: React.ReactNode;
 }
 
 export function GradeSummary({
-	subscribedSubjects,
+	subjects,
 	grades,
 	children,
 }: GradeSummaryProps) {
-	const subjects = Object.values(subscribedSubjects);
-
 	return (
 		<Card>
 			<CardHeader>
@@ -30,10 +28,10 @@ export function GradeSummary({
 			</CardHeader>
 			<CardContent className="flex flex-col gap-4">
 				{subjects.map((subject) => {
-					const isSubjectGradesEmpty = !grades[subject.code];
-					const subjectGrade = isSubjectGradesEmpty
-						? 0
-						: calculateSubjectGrade(subject, grades[subject.code]);
+					const subjectGrade = calculateSubjectGrade(
+						subject,
+						grades[subject.code],
+					);
 
 					const passingTone =
 						subjectGrade >= 6
@@ -54,7 +52,7 @@ export function GradeSummary({
 								variant={passingTone ? "secondary" : "destructive"}
 								className={passingTone}
 							>
-								{subjectGrade.toFixed(2)}
+								{formatGrade(subjectGrade)}
 							</Badge>
 						</div>
 					);

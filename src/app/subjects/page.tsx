@@ -1,10 +1,6 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import {
-	AVAILABLE_COURSES,
-	filterSubjects,
-	parseSubjectsFilter,
-} from "@/lib/subjects";
+import { filterSubjects, parseSubjectsFilter } from "@/lib/subjects";
 import { SearchAndFilter } from "./_components/search-and-filter";
 import { SearchAndFilterSkeleton } from "./_components/search-and-filter-skeleton";
 import { SubjectCard } from "./_components/subject-card";
@@ -41,7 +37,7 @@ export default function SubjectsPage({ searchParams }: PageProps<"/subjects">) {
 				</header>
 
 				<Suspense fallback={<SearchAndFilterSkeleton />}>
-					<SearchAndFilter courses={AVAILABLE_COURSES} />
+					<SearchAndFilter />
 				</Suspense>
 			</aside>
 
@@ -64,7 +60,6 @@ async function SubjectsCount({ searchParams }: { searchParams: SearchParams }) {
 async function SubjectsList({ searchParams }: { searchParams: SearchParams }) {
 	const filter = parseSubjectsFilter(await searchParams);
 	const subjects = await filterSubjects(filter);
-	const searchTerm = filter.search?.toLowerCase();
 
 	if (subjects.length === 0) {
 		return (
@@ -81,7 +76,7 @@ async function SubjectsList({ searchParams }: { searchParams: SearchParams }) {
 
 	return subjects.map((subject) => (
 		<li key={subject.code}>
-			<SubjectCard subject={subject} searchTerm={searchTerm} />
+			<SubjectCard subject={subject} searchTerm={filter.search} />
 		</li>
 	));
 }

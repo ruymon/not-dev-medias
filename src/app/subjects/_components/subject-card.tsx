@@ -18,6 +18,8 @@ import {
 	CollapsibleContent,
 	CollapsibleTrigger,
 } from "@/components/ui/collapsible";
+import { COURSES } from "@/data/courses";
+import { assessmentGroups } from "@/lib/grades";
 import { useSubscribedSubjectsStore } from "@/stores/subscribed-subjects-store";
 import type { Subject } from "@/types/subjects";
 import { HighlightText } from "./highlight-text";
@@ -28,24 +30,19 @@ interface SubjectCardProps {
 }
 
 export function SubjectCard({ subject, searchTerm }: SubjectCardProps) {
-	const { addSubscribedSubject, removeSubscribedSubject, subscribedSubjects } =
-		useSubscribedSubjectsStore();
+	const isSubjectSubscribed = useSubscribedSubjectsStore((state) =>
+		state.subscribedCodes.includes(subject.code),
+	);
+	const toggleSubject = useSubscribedSubjectsStore(
+		(state) => state.toggleSubject,
+	);
 
 	const [isMoreDetailsOpen, setIsMoreDetailsOpen] = useState(false);
 
-	const isSubjectSubscribed = subscribedSubjects[subject.code];
-
-	const handleSubscribe = () => {
-		addSubscribedSubject(subject);
-		toast.message("Adicionado!", {
-			description: `${subject.name} foi adicionado à sua lista de matérias`,
-		});
-	};
-
-	const handleUnsubscribe = () => {
-		removeSubscribedSubject(subject.code);
-		toast.message("Removido!", {
-			description: `${subject.name} foi removido da sua lista de matérias`,
+	const handleToggle = () => {
+		toggleSubject(subject.code);
+		toast.message(isSubjectSubscribed ? "Removido!" : "Adicionado!", {
+			description: `${subject.name} foi ${isSubjectSubscribed ? "removido da" : "adicionado à"} sua lista de matérias`,
 		});
 	};
 
@@ -65,9 +62,7 @@ export function SubjectCard({ subject, searchTerm }: SubjectCardProps) {
 					</CardTitle>
 					<CardAction>
 						<Button
-							onClick={
-								isSubjectSubscribed ? handleUnsubscribe : handleSubscribe
-							}
+							onClick={handleToggle}
 							variant={isSubjectSubscribed ? "destructive" : "secondary"}
 							size="sm"
 						>
@@ -78,40 +73,25 @@ export function SubjectCard({ subject, searchTerm }: SubjectCardProps) {
 
 				<CollapsibleContent>
 					<CardContent className="flex-row gap-6">
-						{subject.examWeight > 0 && (
-							<div className="flex flex-col gap-1">
+						{assessmentGroups(subject).map(({ label, group }) => (
+							<div key={label} className="flex flex-col gap-1">
 								<span className="font-medium">
-									Provas ({subject.examWeight.toFixed(0)}%)
+									{label} ({Math.round(group.weight * 100)}%)
 								</span>
 								<div className="flex items-center gap-2 text-muted-foreground">
-									{subject.exams.map((exam) => (
-										<span key={exam.name}>
-											{exam.name} ({exam.weight.toFixed(2)})
+									{Object.entries(group.items).map(([name, weight]) => (
+										<span key={name}>
+											{name} ({weight.toFixed(2)})
 										</span>
 									))}
 								</div>
 							</div>
-						)}
-
-						{subject.assignmentWeight > 0 && (
-							<div className="flex flex-col gap-1">
-								<span className="font-medium">
-									Trabalhos ({subject.assignmentWeight.toFixed(0)}%)
-								</span>
-								<div className="flex items-center gap-2 text-muted-foreground">
-									{subject.assignments.map((assignment) => (
-										<span key={assignment.name}>
-											{assignment.name} ({assignment.weight.toFixed(2)})
-										</span>
-									))}
-								</div>
-							</div>
-						)}
+						))}
 					</CardContent>
 				</CollapsibleContent>
 
 				<CardFooter className="justify-between">
-					<Badge>{subject.course}</Badge>
+					{subject.course && <Badge>{COURSES[subject.course]}</Badge>}
 					<CollapsibleTrigger asChild>
 						<Button variant="ghost" size="sm">
 							{isMoreDetailsOpen ? "Esconder" : "Mostrar"} detalhes

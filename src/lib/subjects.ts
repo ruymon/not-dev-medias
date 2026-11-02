@@ -1,16 +1,16 @@
 import { cacheLife } from "next/cache";
+import { COURSES } from "@/data/courses";
 import { SUBJECTS } from "@/data/subjects";
-import type { Subject } from "@/types/subjects";
-
-const subjectsArray = Object.values(SUBJECTS);
-
-export const AVAILABLE_COURSES = [
-	...new Set(subjectsArray.map((subject) => subject.course).filter(Boolean)),
-];
+import type { CourseId, Subject } from "@/types/subjects";
+import { normalizeText } from "./text";
 
 export interface SubjectsFilter {
-	search?: string;
-	courses?: string;
+	search: string;
+	courses: CourseId[];
+}
+
+function isCourseId(value: string): value is CourseId {
+	return Object.hasOwn(COURSES, value);
 }
 
 export function parseSubjectsFilter(
@@ -18,10 +18,15 @@ export function parseSubjectsFilter(
 ): SubjectsFilter {
 	const { search, courses } = searchParams;
 	return {
-		search: typeof search === "string" ? search : undefined,
-		courses: typeof courses === "string" ? courses : undefined,
+		search: typeof search === "string" ? search : "",
+		courses:
+			typeof courses === "string" ? courses.split(",").filter(isCourseId) : [],
 	};
 }
+
+const searchIndex = SUBJECTS.map((subject) =>
+	normalizeText(`${subject.code} ${subject.name}`),
+);
 
 export async function filterSubjects({
 	search,
@@ -30,18 +35,12 @@ export async function filterSubjects({
 	"use cache";
 	cacheLife("max");
 
-	const selectedCourses = courses ? courses.split(",") : [];
-	const searchTerm = search?.toLowerCase();
+	const term = normalizeText(search);
 
-	return subjectsArray.filter((subject) => {
-		const matchesSearch =
-			!searchTerm ||
-			subject.name.toLowerCase().includes(searchTerm) ||
-			subject.code.toLowerCase().includes(searchTerm);
-
-		const matchesCourse =
-			selectedCourses.length === 0 || selectedCourses.includes(subject.course);
-
-		return matchesSearch && matchesCourse;
-	});
+	return SUBJECTS.filter(
+		(subject, index) =>
+			searchIndex[index].includes(term) &&
+			(courses.length === 0 ||
+				(subject.course !== null && courses.includes(subject.course))),
+	);
 }
