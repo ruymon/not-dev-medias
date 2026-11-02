@@ -11,9 +11,9 @@ export function Navbar() {
         </span>
 
         <nav className="fixed inset-x-0 bottom-0 z-10 flex h-16 justify-around bg-background/50 backdrop-blur-xl md:static md:h-full md:w-fit md:bg-transparent md:backdrop-blur-none">
-          {NAVBAR_ITEMS.map(({ href, icon, title }) => (
+          {NAVBAR_ITEMS.map(({ href, icon: Icon, title }) => (
             <NavLink key={href} href={href}>
-              {icon}
+              <Icon className="size-4" />
               <span>{title}</span>
             </NavLink>
           ))}
