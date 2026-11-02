@@ -1,6 +1,6 @@
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
-import { cn } from "@/lib/utils"
+import { cn } from "cn"
 import { Slot } from "radix-ui"
 
 const badgeVariants = cva(
@@ -9,9 +9,9 @@ const badgeVariants = cva(
     variants: {
       variant: {
         default: "bg-primary text-primary-foreground [a&]:hover:bg-primary/90",
-        success: "bg-emerald-500 text-emerald-50",
-        warning: "bg-yellow-500 text-yellow-50",
-        danger: "bg-red-500 text-red-50",
+        success: "bg-green-200 text-green-900",
+        warning: "bg-amber-200 text-amber-900",
+        danger: "bg-red-200 text-red-900",
       },
     },
     defaultVariants: {

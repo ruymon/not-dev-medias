@@ -12,9 +12,9 @@ export function HighlightText({ text, searchTerm }: HighlightTextProps) {
 
   return parts.map((part, index) =>
     part.toLowerCase() === searchTerm ? (
-      <span key={index} className="bg-yellow-200 dark:bg-yellow-600/40">
+      <mark key={index} className="bg-amber-300 text-foreground">
         {part}
-      </span>
+      </mark>
     ) : (
       part
     )
