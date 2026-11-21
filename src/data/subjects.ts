@@ -2366,10 +2366,10 @@ export const SUBJECTS: Subjects = {
 		examWeight: 60.0,
 		assignmentWeight: 40.0,
 		exams: [
-			{ name: "P1", weight: 0.25 },
-			{ name: "P2", weight: 0.25 },
-			{ name: "P3", weight: 0.25 },
-			{ name: "P4", weight: 0.25 },
+			{ name: "P1", weight: 0.20 },
+			{ name: "P2", weight: 0.20 },
+			{ name: "P3", weight: 0.30 },
+			{ name: "P4", weight: 0.30 },
 		],
 		assignments: [
 			{ name: "T1", weight: 0.5 },
@@ -2465,10 +2465,10 @@ export const SUBJECTS: Subjects = {
 		examWeight: 70.0,
 		assignmentWeight: 30.0,
 		exams: [
-			{ name: "P1", weight: 0.25 },
-			{ name: "P2", weight: 0.25 },
-			{ name: "P3", weight: 0.25 },
-			{ name: "P4", weight: 0.25 },
+			{ name: "P1", weight: 0.20 },
+			{ name: "P2", weight: 0.20 },
+			{ name: "P3", weight: 0.30 },
+			{ name: "P4", weight: 0.30 },
 		],
 		assignments: [
 			{ name: "T1", weight: 0.5 },
